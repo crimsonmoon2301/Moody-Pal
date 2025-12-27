@@ -1,0 +1,148 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="kursadarbs_reactiveUI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Mood selector"
+        Width="750"
+        Height="450"
+        MaxWidth="750"
+        MaxHeight="500"
+        MinWidth="750"
+        MinHeight="450">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+   <Grid RowDefinitions="Auto,*,Auto"
+          Margin="20">
+        <Border Grid.Row="0"
+                Background="#8B5CF6"
+                CornerRadius="10"
+                Padding="16"
+                Margin="0,0,0,20">
+
+            <Grid ColumnDefinitions="Auto,*">
+                <StackPanel Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Margin="16,0,0,0">
+                    <TextBlock Text="Welcome to Moody Pal!"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+                    <TextBlock Text="How are you feeling today?"
+                               FontSize="14"
+                               Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <UniformGrid Grid.Row="1"
+                     Columns="4"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="10"
+                     >
+            <Button Background="#8B5CF6"
+                    CornerRadius="10"
+                    Margin="10"
+                    Padding="12"
+                    x:Name="nervous_btn"
+                    PointerMoved="info_controller"
+                    PointerExited="hover_PointerMoved"
+                    Click="nervous_btn_Click"
+                    >
+                <StackPanel HorizontalAlignment="Center">
+                    <Image Source="/Assets/nervous.png" Height="128"/>
+                    <TextBlock Text="Nervous"
+                               TextAlignment="Center"
+                               Foreground="White"
+                               Margin="0,8,0,0"
+                           />
+                </StackPanel>
+            </Button>
+            <Button Background="#8B5CF6"
+                    CornerRadius="10"
+                    Margin="10"
+                    Padding="12"
+                    x:Name="happy_btn"
+                    PointerMoved="info_controller"
+                    PointerExited="hover_PointerMoved"
+                    Click="happy_btn_Click">
+                <StackPanel HorizontalAlignment="Center">
+                    <Image Source="/Assets/happy.png" Height="128"/>
+                    <TextBlock Text="Happy"
+                               Foreground="White"
+                               TextAlignment="Center"
+                               Margin="0,8,0,0"
+                           />
+                </StackPanel>
+            </Button>
+            <Button Background="#8B5CF6"
+                    CornerRadius="10"
+                    Margin="10"
+                    Padding="12"
+                    x:Name="calm_btn"
+                    PointerMoved="info_controller"
+                    PointerExited="hover_PointerMoved"
+                    Click="calm_btn_Click">
+                <StackPanel HorizontalAlignment="Center">
+                    <Image Source="/Assets/calm.png" Height="128"/>
+                    <TextBlock Text="Calm"
+                               Foreground="White"
+                               TextAlignment="Center"
+                               Margin="0,8,0,0"
+                           />
+                </StackPanel>
+            </Button>
+
+            <Button Background="#8B5CF6"
+                    CornerRadius="10"
+                    Margin="10"
+                    Padding="12"
+                    x:Name="annoyed_btn"
+                    PointerMoved="info_controller"
+                    PointerExited="hover_PointerMoved"
+                    Click="annoyed_btn_Click">
+                <StackPanel HorizontalAlignment="Center">
+                    <Image Source="/Assets/annoyed.png" Height="128"/>
+                    <TextBlock 
+                           x:Name="annoyedtxt"
+                           Text="Annoyed!"     
+                           Margin="0,8,0,0"
+                           Foreground="White"
+                           TextAlignment="Center"
+                           />
+                </StackPanel>
+            </Button>
+        </UniformGrid>
+        <Label Grid.Row="2"
+                   Grid.Column="0"
+                   DockPanel.Dock="Bottom"
+                   FontSize="12"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Bottom"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center">
+            <TextBlock x:Name="Infotip"
+                       Text="Hover over a button to find out how the program adapts!"
+                       Foreground="White"
+                       Margin="0,8,0,0"
+                       TextAlignment="Center"/>
+            
+            </Label>
+
+    </Grid>
+    <Window.Background>
+		<LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,50%">
+            <GradientStop Color="#660066" Offset="0.1"/>
+            <GradientStop Color="#330040" Offset="0.4"/>
+            <GradientStop Color="#6A359C" Offset="0.8"/>
+        </LinearGradientBrush>
+    </Window.Background>
+</Window>

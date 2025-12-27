@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+        x:Class="kursadarbs_reactiveUI.Splash"
+        x:DataType="vm:SplashViewModel"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:li="using:LoadingIndicators.Avalonia"
+        Title="Moody Pal"
+        WindowStartupLocation="CenterScreen"
+        Width="700"
+        Height="450"
+        MaxWidth="700"
+        MaxHeight="500"
+        MinWidth="650"
+        MinHeight="450"
+        >
+  <Border>
+        <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,Auto">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   FontSize="18"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   Content="{Binding ProgramName}">
+            </Label>
+            <li:LoadingIndicator Mode="Arcs" SpeedRatio="1.2" />
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   DockPanel.Dock="Bottom"
+                   Content="{Binding StartupMessage}"
+                   FontSize="12"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" />
+            
+        </Grid>
+    </Border>
+    <Window.Background>
+		<LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,50%">
+            <GradientStop Color="#660066" Offset="0.1"/>
+            <GradientStop Color="#330040" Offset="0.4"/>
+            <GradientStop Color="#6A359C" Offset="0.8"/>
+        </LinearGradientBrush>
+    </Window.Background>
+</Window>
