@@ -5,10 +5,10 @@ Moody Pal is my attempt at creating productivity software for ADHD people in min
 Built with Avalonia
 
 Added features so far:
-- Localization, will use english but for testing it's latvian
+- Localization
 - Splash screen with loading icon
 - Mood selector which adapts the app 
-- Language selector (for locales)
+- Language selector (for localization)
 
 TODO list:
 - Notes
