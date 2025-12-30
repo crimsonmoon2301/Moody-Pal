@@ -14,7 +14,8 @@
         MaxWidth="750"
         MaxHeight="500"
         MinWidth="750"
-        MinHeight="450">
+        MinHeight="450"
+        WindowStartupLocation="CenterScreen">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -40,6 +41,30 @@
                     <TextBlock Text="{x:Static assets:Resources.MoodGreeting}"
                                FontSize="14"
                                Foreground="White"/>
+                  
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                >
+                        <Label Content="{x:Static assets:Resources.LangSelect_title}"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Padding="0"/>
+						    <Button x:Name="langselect_eng"
+                                    Content="English"
+                                    FontSize="12"
+                                    Click="langselect_eng_Click"
+                                    HorizontalAlignment="Right"
+                                    Foreground="White"
+                                    />
+                            <Button x:Name="langselect_lv"
+                                    Content="Latviešu"
+                                    FontSize="12"
+                                    Click="langselect_lv_Click"
+                                    HorizontalAlignment="Right"
+                                    Foreground="White"
+                                    />
+                    </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>

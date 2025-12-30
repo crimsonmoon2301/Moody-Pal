@@ -115,6 +115,15 @@ namespace kursadarbs_reactiveUI.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Languages:.
+        /// </summary>
+        public static string LangSelect_title {
+            get {
+                return ResourceManager.GetString("LangSelect_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Annoyed.
         /// </summary>
         public static string MoodCard_annoyed {

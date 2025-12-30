@@ -135,6 +135,9 @@
   <data name="Infotip_nerv" xml:space="preserve">
     <value>Program will offer breathing exercises before you begin, colors more warmer, that don't cause emotions</value>
   </data>
+  <data name="LangSelect_title" xml:space="preserve">
+    <value>Languages:</value>
+  </data>
   <data name="MoodCard_annoyed" xml:space="preserve">
     <value>Annoyed</value>
   </data>

@@ -5,6 +5,8 @@ using kursadarbs_reactiveUI.ViewModels;
 using kursadarbs_reactiveUI.Views;
 using kursadarbs_reactiveUI;
 using System.Globalization;
+using Avalonia;
+using System.Diagnostics;
 
 namespace kursadarbs_reactiveUI.Views
 {
@@ -15,6 +17,7 @@ namespace kursadarbs_reactiveUI.Views
             InitializeComponent();
         }
 
+        // Each of the buttons has a event binded to this function. It reads the button's name and adapts accordingly. It reads the text from the locale files located in /Assets/*.resx
         private void info_controller(object? sender, Avalonia.Input.PointerEventArgs e)
         {
             var button = (sender as Button)!;
@@ -35,21 +38,21 @@ namespace kursadarbs_reactiveUI.Views
                 default:
                     Infotip.Text = " ";
                     break;
-                //case "annoyed_btn":
-                //    Infotip.Text = "Program will use neutral colors and less distractions to get more done";
-                //    break;
-                //case "calm_btn":
-                //    Infotip.Text = "Program will use calm, warmer colors";
-                //    break;
-                //case "happy_btn":
-                //    Infotip.Text = "Program will launch as normal";
-                //    break;
-                //case "nervous_btn":
-                //    Infotip.Text = "Program will offer breathing exercises before you begin, colors more warmer, that don't cause emotions";
-                //    break;
-                //default:
-                //    Infotip.Text = " ";
-                //    break;
+                    //case "annoyed_btn":
+                    //    Infotip.Text = "Program will use neutral colors and less distractions to get more done";
+                    //    break;
+                    //case "calm_btn":
+                    //    Infotip.Text = "Program will use calm, warmer colors";
+                    //    break;
+                    //case "happy_btn":
+                    //    Infotip.Text = "Program will launch as normal";
+                    //    break;
+                    //case "nervous_btn":
+                    //    Infotip.Text = "Program will offer breathing exercises before you begin, colors more warmer, that don't cause emotions";
+                    //    break;
+                    //default:
+                    //    Infotip.Text = " ";
+                    //    break;
             }
         }
         private void hover_PointerMoved(object? sender, Avalonia.Input.PointerEventArgs e)
@@ -83,6 +86,29 @@ namespace kursadarbs_reactiveUI.Views
             var happywindow = new HappyApp();
             happywindow.Show();
             this.Close();
+        }
+
+        private void langselect_eng_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            Assets.Resources.Culture = new CultureInfo("en-US");
+            var refreshwindow = new MainWindow();
+            var oldwindow = this;
+            refreshwindow.Show();
+            oldwindow.Close();
+        }
+
+        private void langselect_lv_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            Assets.Resources.Culture = new CultureInfo("lv-LV");
+            var refreshwindow = new MainWindow();
+            var oldwindow = this;
+            refreshwindow.Show();
+            oldwindow.Close();
+            
+        }
+
+        private void ComboBox_DropDownOpened(object? sender, System.EventArgs e)
+        {
         }
     }
 }

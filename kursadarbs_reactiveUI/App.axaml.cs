@@ -22,7 +22,7 @@ namespace kursadarbs_reactiveUI
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                Assets.Resources.Culture = new CultureInfo("lv-LV");
+                //Assets.Resources.Culture = new CultureInfo("lv-LV");
                 var splashScreenVM = new SplashViewModel();
                 var splashScreen = new Splash
                 {

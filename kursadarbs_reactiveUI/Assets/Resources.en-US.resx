@@ -118,45 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppGreeting" xml:space="preserve">
-    <value>Laipni lūdzam Moody Pal!</value>
+    <value>Welcome to Moody Pal!</value>
   </data>
   <data name="InfoTip" xml:space="preserve">
-    <value>Pārvieto kursoru virs pogas, lai varētu iegūt informāciju kā programma pielāgojas!</value>
+    <value>Hover over a button to get more info about how the program adapts</value>
   </data>
   <data name="Infotip_annoyed" xml:space="preserve">
-    <value>Programma izmantos neitrālas krāsas un mazāk uzmanību piesaistošus elementus</value>
+    <value>Program will use neutral colors and less distractions to get more done</value>
   </data>
   <data name="Infotip_calm" xml:space="preserve">
-    <value>Programma izmantos mierīgākas, gaišākas krāsas</value>
+    <value>Program will use calm, warmer colors</value>
   </data>
   <data name="Infotip_happy" xml:space="preserve">
-    <value>Programma tiks palaista normālā režīmā</value>
+    <value>Program will launch as normal</value>
   </data>
   <data name="Infotip_nerv" xml:space="preserve">
-    <value>Programma piedāvās elpošanas vingrinājums pirms sākšanas, krāsas būs gaišākas, kuras neizraisa emocijas.</value>
+    <value>Program will offer breathing exercises before you begin, colors more warmer, that don't cause emotions</value>
   </data>
   <data name="LangSelect_title" xml:space="preserve">
-    <value>Valodas:</value>
+    <value>Languages:</value>
   </data>
   <data name="MoodCard_annoyed" xml:space="preserve">
-    <value>Aizkaitināts</value>
+    <value>Annoyed</value>
   </data>
   <data name="MoodCard_calm" xml:space="preserve">
-    <value>Mierīgs</value>
+    <value>Calm</value>
   </data>
   <data name="MoodCard_happy" xml:space="preserve">
-    <value>Priecīgs</value>
+    <value>Happy</value>
   </data>
   <data name="MoodCard_nerv" xml:space="preserve">
-    <value>Nervozs</value>
+    <value>Nervous</value>
   </data>
   <data name="MoodGreeting" xml:space="preserve">
-    <value>Kā jūtamies šodien?</value>
+    <value>How are you feeling today?</value>
   </data>
   <data name="MoodSelector_title" xml:space="preserve">
-    <value>Noskaņojumu izvēlne</value>
+    <value>Mood selector</value>
   </data>
   <data name="StartupMessage" xml:space="preserve">
-    <value>Notiek ielāde... Lūdzu uzgaidīt</value>
+    <value>Loading... Please wait</value>
   </data>
 </root>

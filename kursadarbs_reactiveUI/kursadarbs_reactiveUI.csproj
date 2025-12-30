@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Assets\Resources.en-US.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Assets\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
