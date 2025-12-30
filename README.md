@@ -8,11 +8,10 @@ Added features so far:
 - Localization, will use english but for testing it's latvian
 - Splash screen with loading icon
 - Mood selector which adapts the app 
-
+- Language selector (for locales)
 
 TODO list:
 - Notes
 - Pomodoro timer
 - Breathing exercises
-- Language selector (for locales)
 # Heavily WIP!
