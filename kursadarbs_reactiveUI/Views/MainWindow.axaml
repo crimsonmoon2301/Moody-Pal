@@ -6,8 +6,9 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
+        xmlns:assets="using:kursadarbs_reactiveUI.Assets"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Mood selector"
+        Title="{x:Static assets:Resources.MoodSelector_title}"
         Width="750"
         Height="450"
         MaxWidth="750"
@@ -32,11 +33,11 @@
                 <StackPanel Grid.Column="1"
                             VerticalAlignment="Center"
                             Margin="16,0,0,0">
-                    <TextBlock Text="Welcome to Moody Pal!"
+                    <TextBlock Text="{x:Static assets:Resources.AppGreeting}"
                                FontSize="20"
                                FontWeight="Bold"
                                Foreground="White"/>
-                    <TextBlock Text="How are you feeling today?"
+                    <TextBlock Text="{x:Static assets:Resources.MoodGreeting}"
                                FontSize="14"
                                Foreground="White"/>
                 </StackPanel>
@@ -59,7 +60,7 @@
                     >
                 <StackPanel HorizontalAlignment="Center">
                     <Image Source="/Assets/nervous.png" Height="128"/>
-                    <TextBlock Text="Nervous"
+                    <TextBlock Text="{x:Static assets:Resources.MoodCard_nerv}"
                                TextAlignment="Center"
                                Foreground="White"
                                Margin="0,8,0,0"
@@ -76,7 +77,7 @@
                     Click="happy_btn_Click">
                 <StackPanel HorizontalAlignment="Center">
                     <Image Source="/Assets/happy.png" Height="128"/>
-                    <TextBlock Text="Happy"
+                    <TextBlock Text="{x:Static assets:Resources.MoodCard_happy}"
                                Foreground="White"
                                TextAlignment="Center"
                                Margin="0,8,0,0"
@@ -93,7 +94,7 @@
                     Click="calm_btn_Click">
                 <StackPanel HorizontalAlignment="Center">
                     <Image Source="/Assets/calm.png" Height="128"/>
-                    <TextBlock Text="Calm"
+                    <TextBlock Text="{x:Static assets:Resources.MoodCard_calm}"
                                Foreground="White"
                                TextAlignment="Center"
                                Margin="0,8,0,0"
@@ -113,7 +114,7 @@
                     <Image Source="/Assets/annoyed.png" Height="128"/>
                     <TextBlock 
                            x:Name="annoyedtxt"
-                           Text="Annoyed!"     
+                           Text="{x:Static assets:Resources.MoodCard_annoyed}"     
                            Margin="0,8,0,0"
                            Foreground="White"
                            TextAlignment="Center"
@@ -130,7 +131,7 @@
                    HorizontalContentAlignment="Center"
                    VerticalContentAlignment="Center">
             <TextBlock x:Name="Infotip"
-                       Text="Hover over a button to find out how the program adapts!"
+                       Text="{x:Static assets:Resources.InfoTip}"
                        Foreground="White"
                        Margin="0,8,0,0"
                        TextAlignment="Center"/>

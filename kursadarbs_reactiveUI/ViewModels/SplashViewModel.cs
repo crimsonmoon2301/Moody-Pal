@@ -22,5 +22,6 @@ namespace kursadarbs_reactiveUI.ViewModels
             set { this.RaiseAndSetIfChanged(ref _startupMessage, value); }
         }
         private string _startupMessage = "Starting application...";
+    
     }
 }

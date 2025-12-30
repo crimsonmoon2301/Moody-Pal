@@ -1,9 +1,13 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia.Threading;
+using kursadarbs_reactiveUI;
 using kursadarbs_reactiveUI.ViewModels;
 using kursadarbs_reactiveUI.Views;
+using System.Globalization;
 using System.Threading.Tasks;
+using System;
 
 namespace kursadarbs_reactiveUI
 {
@@ -18,6 +22,7 @@ namespace kursadarbs_reactiveUI
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
+                Assets.Resources.Culture = new CultureInfo("lv-LV");
                 var splashScreenVM = new SplashViewModel();
                 var splashScreen = new Splash
                 {
@@ -26,15 +31,10 @@ namespace kursadarbs_reactiveUI
                 desktop.MainWindow = splashScreen;
 
                 splashScreen.Show();
-                splashScreenVM.StartupMessage = "Loading...";
-                await Task.Delay(2000);
-                splashScreenVM.StartupMessage = "Good things come to those who wait...";
-                await Task.Delay(3000);
-                splashScreenVM.StartupMessage = "One step closer to productivity...";
-                await Task.Delay(4000);
-                splashScreenVM.StartupMessage = "Ready!";
-                await Task.Delay(500);
 
+                splashScreenVM.StartupMessage = Assets.Resources.StartupMessage;
+                await Task.Delay(8000);
+                
                 var mainWin = new MainWindow
                 {
                     DataContext = new MainWindowViewModel(),
@@ -47,6 +47,5 @@ namespace kursadarbs_reactiveUI
 
             base.OnFrameworkInitializationCompleted();
         }
-
     }
 }

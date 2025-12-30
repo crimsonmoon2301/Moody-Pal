@@ -3,6 +3,8 @@ using Avalonia.Controls.ApplicationLifetimes;
 using System.Threading.Tasks;
 using kursadarbs_reactiveUI.ViewModels;
 using kursadarbs_reactiveUI.Views;
+using kursadarbs_reactiveUI;
+using System.Globalization;
 
 namespace kursadarbs_reactiveUI.Views
 {
@@ -19,20 +21,35 @@ namespace kursadarbs_reactiveUI.Views
             switch (button.Name)
             {
                 case "annoyed_btn":
-                    Infotip.Text = "Program will use neutral colors and less distractions to get more done";
+                    Infotip.Text = Assets.Resources.Infotip_annoyed;
                     break;
                 case "calm_btn":
-                    Infotip.Text = "Program will use calm, warmer colors";
+                    Infotip.Text = Assets.Resources.Infotip_calm;
                     break;
                 case "happy_btn":
-                    Infotip.Text = "Program will launch as normal";
+                    Infotip.Text = Assets.Resources.Infotip_happy;
                     break;
                 case "nervous_btn":
-                    Infotip.Text = "Program will offer breathing exercises before you begin, colors more warmer, that don't cause emotions";
+                    Infotip.Text = Assets.Resources.Infotip_nerv;
                     break;
                 default:
                     Infotip.Text = " ";
                     break;
+                //case "annoyed_btn":
+                //    Infotip.Text = "Program will use neutral colors and less distractions to get more done";
+                //    break;
+                //case "calm_btn":
+                //    Infotip.Text = "Program will use calm, warmer colors";
+                //    break;
+                //case "happy_btn":
+                //    Infotip.Text = "Program will launch as normal";
+                //    break;
+                //case "nervous_btn":
+                //    Infotip.Text = "Program will offer breathing exercises before you begin, colors more warmer, that don't cause emotions";
+                //    break;
+                //default:
+                //    Infotip.Text = " ";
+                //    break;
             }
         }
         private void hover_PointerMoved(object? sender, Avalonia.Input.PointerEventArgs e)

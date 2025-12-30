@@ -7,6 +7,7 @@
         x:DataType="vm:SplashViewModel"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         xmlns:li="using:LoadingIndicators.Avalonia"
+        xmlns:assets="using:kursadarbs_reactiveUI.Assets"
         Title="Moody Pal"
         WindowStartupLocation="CenterScreen"
         Width="700"
@@ -32,13 +33,13 @@
             <Label Grid.Row="1"
                    Grid.Column="0"
                    DockPanel.Dock="Bottom"
-                   Content="{Binding StartupMessage}"
+                   x:Name="startup_msg"
+                   Content="{x:Static assets:Resources.StartupMessage}"
                    FontSize="12"
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Stretch"
                    HorizontalContentAlignment="Center"
                    VerticalContentAlignment="Center" />
-            
         </Grid>
     </Border>
     <Window.Background>
