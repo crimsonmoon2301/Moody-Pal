@@ -1,9 +1,73 @@
 <Window xmlns="https://github.com/avaloniaui"
+        xmlns:compilerservices="using:System.Runtime.CompilerServices"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.HappyApp"
+        x:DataType="vm:HappyAppViewModel"
         Title="HappyApp">
-  This is the happy part of the app
+  <Design.DataContext>
+	  <vm:HappyAppViewModel/>
+  </Design.DataContext>
+    <Border CornerRadius="10">
+        <Grid Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Moody Pal"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="17"
+                       Margin="10"/>
+            
+            <StackPanel Grid.Row="1" Name="RadioButtonPanel">
+
+                <RadioButton Content="Main Screen"
+                             IsChecked="True"
+                             Height="50" Foreground="White" FontSize="12"
+                             Margin="10"/>
+                <RadioButton Content="Notes"
+                             Height="50" Foreground="White"
+                             FontSize="12"
+                             Margin="10"/>
+                <RadioButton Content="Pomodoro"
+                             IsChecked="False"
+                             Height="50"
+                             Margin="10"
+                             Foreground="White"
+                             FontSize="12"/>
+                <RadioButton Content="Breathing exercises"
+                             Name="AboutProg_btn"
+                             Height="50"
+                             Margin="10"
+                             Foreground="White"
+                             FontSize="12" />
+            </StackPanel>
+            <ContentControl 
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="10"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="{Binding CurrentPage}"
+                Foreground="White"/>
+        </Grid>
+    </Border>
+    <Window.Background>
+		<LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,50%">
+            <GradientStop Color="#660066" Offset="0.1"/>
+            <GradientStop Color="#330040" Offset="0.4"/>
+            <GradientStop Color="#6A359C" Offset="0.8"/>
+        </LinearGradientBrush>
+    </Window.Background>
 </Window>
