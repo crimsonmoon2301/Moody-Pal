@@ -51,14 +51,14 @@
                            Foreground="White"
                            Padding="0"/>
 						    <Button x:Name="langselect_eng"
-                                    Content="English"
+                                    Content="ENG"
                                     FontSize="12"
                                     Click="langselect_eng_Click"
                                     HorizontalAlignment="Right"
                                     Foreground="White"
                                     />
                             <Button x:Name="langselect_lv"
-                                    Content="Latviešu"
+                                    Content="LV"
                                     FontSize="12"
                                     Click="langselect_lv_Click"
                                     HorizontalAlignment="Right"

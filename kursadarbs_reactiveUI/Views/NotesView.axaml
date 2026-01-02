@@ -3,12 +3,61 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="450"
              x:Class="kursadarbs_reactiveUI.Views.NotesView"
              x:DataType="vm:NotesViewModel">
 <Design.DataContext>
 	<vm:NotesViewModel/>
 </Design.DataContext>
-
-  TESTESTESTESTESTSTESTAETEWATAWTA
+    <Grid x:Name="ContentArea" Width="700" Height="450">
+        <RelativePanel Width="600" Height="350" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ComboBox Name="NotesSearch"
+                            Margin="0,-48,0,16"
+                            Width="200"
+                            RelativePanel.AlignRightWithPanel="True"
+                            RelativePanel.AlignTopWithPanel="True"/>
+            <ListBox Width="600" Height="280" Name="LstNotes"
+                      CornerRadius="2"
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
+                      RelativePanel.AlignTopWithPanel="True"
+                      RelativePanel.AlignBottomWithPanel="True"
+                      BorderThickness="0"
+                      Margin="0,0,0,64">
+            </ListBox>
+            <TextBlock Name="EmptyText"
+                       FontWeight="Light"
+                       IsVisible="False"
+                       Margin="0,32,0,0"
+                       FontSize="16"
+                       HorizontalAlignment="Center"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"/>
+            <Button 
+                    Name="newNote"
+                    RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.LeftOf="deleteNote"
+                    MinWidth="250"
+                    Width="250"
+                    Height="40"
+                    Margin="0,0,0,16"/>
+            <Button 
+                    IsEnabled="False"
+                    Name="deleteNote"
+                    RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    Width="50"
+                    Height="40"
+                    Margin="16,0,0,16">
+                <Button.Flyout>
+                    <Flyout>
+                        <StackPanel MaxWidth="420">
+                            <TextBlock Name="deleteFlyout" Margin="0,0,0,16" />
+                            <Button Name="deleteNoteFly"/>
+                        </StackPanel>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+        </RelativePanel>
+    </Grid>
 </UserControl>

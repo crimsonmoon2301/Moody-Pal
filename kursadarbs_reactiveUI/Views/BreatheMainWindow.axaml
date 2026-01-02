@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="using:kursadarbs_reactiveUI"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+        xmlns:li="using:LoadingIndicators.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
+        x:Class="kursadarbs_reactiveUI.Views.BreatheMainWindow"
+        x:CompileBindings="True"
+        x:DataType="vm:BreatheMainWindowViewModel"
+        Title="Breathing Exercises"
+        Background="PaleTurquoise"
+        Width="500"
+        Height="400"
+        MaxWidth="600"
+        MaxHeight="400"
+        MinHeight="200"
+        MinWidth="300"
+        WindowStartupLocation="CenterScreen">
+ <Design.DataContext>
+	 <vm:BreatheMainWindowViewModel/>
+ </Design.DataContext>
+    <Grid RowDefinitions="*,auto" Margin="10">
+        <TransitioningContentControl Content="{Binding CurrentPage}" />
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="5"
+					HorizontalAlignment="Center">     
+            <Button Command="{Binding NavigateNextCommand}" Content="Start"
+                    Name="start_btn"
+                    Click="start_btn_Click"
+                    IsEnabled="True"
+                    Background="Gray"
+                    Foreground="White"
+                    Width="50"
+                    HorizontalContentAlignment="Center"
+                    
+                    />
+            <Button Command="{Binding NavigatePreviousCommand}" Content="Stop"
+                    Name="stop_btn"
+                    Click="stop_btn_Click"
+                    IsEnabled="False"
+                    Background="Gray"
+                    Foreground="White"
+                    Width="50"
+                    HorizontalContentAlignment="Center"
+                    
+                    />
+        </StackPanel>
+    </Grid>
+</Window>

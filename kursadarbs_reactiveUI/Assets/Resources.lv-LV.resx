@@ -120,6 +120,12 @@
   <data name="AppGreeting" xml:space="preserve">
     <value>Laipni lūdzam Moody Pal!</value>
   </data>
+  <data name="BreatheIn" xml:space="preserve">
+    <value>Ieelpojam...</value>
+  </data>
+  <data name="BreatheOut" xml:space="preserve">
+    <value>Izelpojam...</value>
+  </data>
   <data name="InfoTip" xml:space="preserve">
     <value>Pārvieto kursoru virs pogas, lai varētu iegūt informāciju kā programma pielāgojas!</value>
   </data>

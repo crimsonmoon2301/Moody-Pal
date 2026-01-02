@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
 
@@ -58,6 +57,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BreatheMainWindow.axaml.cs">
+      <DependentUpon>BreatheMainWindow.axaml</DependentUpon>
     </Compile>
 	  
     <EmbeddedResource Update="Assets\Resources.resx">

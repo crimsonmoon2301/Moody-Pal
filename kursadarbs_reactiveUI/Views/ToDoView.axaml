@@ -1,0 +1,61 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+             x:Class="kursadarbs_reactiveUI.Views.ToDoView"
+             x:DataType="vm:ToDoViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450">
+<Design.DataContext>
+	<vm:ToDoViewModel/>
+</Design.DataContext>
+    <Grid RowDefinitions="Auto, *, Auto"
+          x:Name="Root">
+
+        <!-- This is our title text block. We use Style.Classes to style it accordingly -->
+        <TextBlock Text="My ToDo-List" Classes="h1" />
+
+        <ScrollViewer Grid.Row="1">
+            <!-- This ItemsControl show all added ToDoItems. -->
+            <!-- It needs to be placed inside a ScrollViewer because other than a ListBox it has not its own -->
+            <ItemsControl ItemsSource="{Binding ToDoItems}">
+                <ItemsControl.ItemTemplate>
+                    <!-- The ItemTemplate defines how each item should be represented -->
+                    <!-- Our Item will be represented by a CheckBox and a Delete-Button -->
+                    <DataTemplate DataType="vm:ToDoViewModel">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <CheckBox IsChecked="{Binding IsChecked}"
+                                      Content="{Binding Content}" />
+
+                            <!-- Note how we use the Root-Grid to get the MainViewModel here. As we use compiled bindings we have to cast the DataContext -->
+                            <!-- The command parameter is the local ToDoItemViewModel being processed --> 
+                            <Button Grid.Column="1"
+                                    
+                                    CommandParameter="{Binding .}">
+                                <PathIcon Data="{DynamicResource DeleteIconData}"
+                                          Height="15"
+                                          Foreground="Red" />
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- This TextBox can be used to add new ToDoItems -->
+        <TextBox Grid.Row="2"
+                 Text=""
+                 Watermark="Add a new Item">
+            <TextBox.InnerRightContent>
+                <Button>
+                    <PathIcon Data="{DynamicResource AcceptIconData}"
+                              Foreground="Green" />
+                </Button>
+            </TextBox.InnerRightContent>
+            <!-- KeyBindings allow us to define KeyGestures  -->
+            <TextBox.KeyBindings>
+                <KeyBinding Gesture="Enter" />
+            </TextBox.KeyBindings>
+        </TextBox>
+    </Grid>
+</UserControl>

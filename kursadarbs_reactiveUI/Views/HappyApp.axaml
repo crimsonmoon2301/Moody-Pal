@@ -7,7 +7,15 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.HappyApp"
         x:DataType="vm:HappyAppViewModel"
-        Title="HappyApp">
+        Title="HappyApp"
+        Width="800"
+        Height="450"
+        MaxWidth="800"
+        MaxHeight="700"
+        MinWidth="650"
+        MinHeight="450"
+        WindowStartupLocation="CenterScreen"
+        >
   <Design.DataContext>
 	  <vm:HappyAppViewModel/>
   </Design.DataContext>
@@ -19,48 +27,118 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
+                <RowDefinition Height="55"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <TextBlock Text="Moody Pal"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
+                       HorizontalAlignment="Center"
                        Foreground="White"
-                       FontSize="17"
-                       Margin="10"/>
-            
-            <StackPanel Grid.Row="1" Name="RadioButtonPanel">
-
-                <RadioButton Content="Main Screen"
-                             IsChecked="True"
-                             Height="50" Foreground="White" FontSize="12"
-                             Margin="10"/>
+                       FontSize="18"
+                       Margin="0"/>
+                <Border
+                    Grid.Row="1"
+                        Margin="10"
+                        CornerRadius="8"
+                        BorderThickness="1.5"
+                        BorderBrush="#55FFFFFF"
+                        Background="#22FFFFFF">
+				<StackPanel Grid.Row="1" Name="RadioButtonPanel">
+                
                 <RadioButton Content="Notes"
+                             Click="Notes_Click"
                              Height="50" Foreground="White"
+                             IsChecked="true"
                              FontSize="12"
-                             Margin="10"/>
+                             Margin="5"/>
                 <RadioButton Content="Pomodoro"
                              IsChecked="False"
+                             Click="Pomo_Click"
                              Height="50"
-                             Margin="10"
+                             Margin="5"
                              Foreground="White"
                              FontSize="12"/>
-                <RadioButton Content="Breathing exercises"
-                             Name="AboutProg_btn"
+                <RadioButton Content="To-Do List"
+                             x:Name="todo_btn"
+                             Click="Todo_Click"
                              Height="50"
-                             Margin="10"
+                             Margin="5"
                              Foreground="White"
-                             FontSize="12" />
+                             FontSize="12"/>
+                 <Button Content="Breathing exercises"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Height="40"
+                    Margin="10"
+                    Foreground="White"
+                    x:Name="breathe_btn"
+                    Click="breathe_btn_Click"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    HorizontalAlignment="Left"
+                    FontSize="12" />
             </StackPanel>
-            <ContentControl 
+            </Border>
+            <StackPanel 
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+                        <Label
+                           Content="Languages:"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Padding="0"/>
+						    <Button x:Name="langselect_eng"
+                                    Content="ENG"
+                                    FontSize="12"
+                                    Click="langselect_eng_Click"
+                                    HorizontalAlignment="Right"
+                                    Foreground="White"
+                                    />
+                            <Button x:Name="langselect_lv"
+                                    Content="LV"
+                                    FontSize="12"
+                                    Click="langselect_lv_Click"
+                                    HorizontalAlignment="Right"
+                                    Foreground="White"
+                                    />
+                
+                    </StackPanel>
+            <Button x:Name="moodselect_btn"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="8"
+                    Content="Back to Mood Selector"
+                    Click="moodselect_btn_Click"
+                    FontSize="12"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Foreground="White"
+                    />
+            <Border Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="10"
+                    CornerRadius="8"
+                    BorderThickness="1.5"
+                    BorderBrush="#55FFFFFF"
+                    Background="#22FFFFFF">
+			<ContentControl 
                 Grid.Row="1"
                 Grid.Column="1"
                 Margin="10"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
                 Content="{Binding CurrentPage}"
-                Foreground="White"/>
+                Foreground="White"/>	
+            </Border>
+            
         </Grid>
     </Border>
     <Window.Background>
