@@ -3,14 +3,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+             xmlns:li="using:LoadingIndicators.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="kursadarbs_reactiveUI.Views.BreatheMainView"
-             x:DataType="vm:BreatheMainViewModel"
-             Width="400">
-<Design.DataContext>
-	<vm:BreatheMainViewModel/>
-</Design.DataContext>
-  <Grid VerticalAlignment="Top" Grid.Row="0" Width="300" HorizontalAlignment="Center">
+             x:Class="kursadarbs_reactiveUI.Views.DeepBreathingMainView"
+             x:DataType="vm:DeepBreathingMainViewModel">
+  <Design.DataContext>
+	 <vm:DeepBreathingMainViewModel/>
+ </Design.DataContext>
+    <Grid VerticalAlignment="Top" Grid.Row="0" Width="300" HorizontalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="35"/>
                 <RowDefinition Height="Auto"/>
@@ -27,7 +27,7 @@
                    VerticalAlignment="Top"
                    FontSize="22"
                    FontWeight="SemiBold"
-                   Text="Box Breathing"
+                   Text="Deep Breathing"
                    TextAlignment="Center"
                    TextWrapping="Wrap"
                    Foreground="Black"/>

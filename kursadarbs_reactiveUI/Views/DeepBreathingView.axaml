@@ -5,14 +5,13 @@
              xmlns:li="using:LoadingIndicators.Avalonia"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="kursadarbs_reactiveUI.Views.BreatheView"
-             x:DataType="vm:BreatheViewModel"
-             x:Name="Breathing_view"
-             Loaded="Breathing_view_Loaded"
-             Unloaded="Breathing_view_Unloaded">
-             
-  <Design.DataContext>
-	 <vm:BreatheViewModel/>
+             x:Class="kursadarbs_reactiveUI.Views.DeepBreathingView"
+             x:DataType="vm:DeepBreathingViewModel"
+             x:Name="DeepBreath"
+             Loaded="DeepBreath_Loaded"
+             Unloaded="DeepBreath_Unloaded">
+   <Design.DataContext>
+	 <vm:DeepBreathingViewModel/>
  </Design.DataContext>
     <StackPanel VerticalAlignment="Center" Spacing="5" MaxWidth="350">
         <TextBlock VerticalAlignment="Center"
@@ -23,7 +22,7 @@
                    TextWrapping="Wrap"
                    Foreground="Black"/>
         
-        <li:LoadingIndicator Mode="Pulse" SpeedRatio="0.4" />
+        <li:LoadingIndicator Mode="Arc" SpeedRatio="0.4" />
         
     </StackPanel>
 </UserControl>

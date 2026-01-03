@@ -106,9 +106,5 @@ namespace kursadarbs_reactiveUI.Views
             oldwindow.Close();
             
         }
-
-        private void ComboBox_DropDownOpened(object? sender, System.EventArgs e)
-        {
-        }
     }
 }

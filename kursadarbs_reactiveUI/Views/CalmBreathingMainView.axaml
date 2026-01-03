@@ -4,11 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="kursadarbs_reactiveUI.Views.BreatheMainView"
-             x:DataType="vm:BreatheMainViewModel"
-             Width="400">
-<Design.DataContext>
-	<vm:BreatheMainViewModel/>
+             x:Class="kursadarbs_reactiveUI.Views.CalmBreathingMainView"
+             x:DataType="vm:CalmBreathingMainViewModel"
+             x:Name="calmbreathing_view">
+  <Design.DataContext>
+	<vm:CalmBreathingMainViewModel/>
 </Design.DataContext>
   <Grid VerticalAlignment="Top" Grid.Row="0" Width="300" HorizontalAlignment="Center">
             <Grid.RowDefinitions>
@@ -27,7 +27,7 @@
                    VerticalAlignment="Top"
                    FontSize="22"
                    FontWeight="SemiBold"
-                   Text="Box Breathing"
+                   Text="4-7-8 Breathing"
                    TextAlignment="Center"
                    TextWrapping="Wrap"
                    Foreground="Black"/>

@@ -16,14 +16,62 @@ namespace kursadarbs_reactiveUI.Views
 
         private void start_btn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            start_btn.IsEnabled = false;
-            stop_btn.IsEnabled = true;
+            start_btn.IsVisible = false;
+            stop_btn.IsVisible = true;
+            differentexam_btn.IsVisible = false;
         }
 
         private void stop_btn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            start_btn.IsEnabled = true;
-            stop_btn.IsEnabled = false;
+            start_btn.IsVisible = true;
+            stop_btn.IsVisible = false;
+            differentexam_btn.IsVisible = true;
+        }
+
+        private void differentexam_btn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            start_btn.IsVisible = false;
+            stop_btn.IsVisible = false;
+            differentexam_btn.IsVisible = false;
+
+            // show the selection buttons
+            box_btn.IsVisible = true;
+            calmbreath_btn.IsVisible = true;
+            deep_btn.IsVisible = true;
+        }
+
+        private void box_btn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            // selection buttons
+            box_btn.IsVisible = false;
+            calmbreath_btn.IsVisible = false;
+            deep_btn.IsVisible = false;
+            //
+            start_btn.IsVisible = true;
+            stop_btn.IsVisible = false;
+            differentexam_btn.IsVisible = true;
+        }
+
+        private void calmbreath_btn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            box_btn.IsVisible = false;
+            calmbreath_btn.IsVisible = false;
+            deep_btn.IsVisible = false;
+            //
+            start_btn.IsVisible = true;
+            stop_btn.IsVisible = false;
+            differentexam_btn.IsVisible = true;
+        }
+
+        private void deep_btn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            box_btn.IsVisible = false;
+            calmbreath_btn.IsVisible = false;
+            deep_btn.IsVisible = false;
+            //
+            start_btn.IsVisible = true;
+            stop_btn.IsVisible = false;
+            differentexam_btn.IsVisible = true;
         }
     }
 }

@@ -120,6 +120,9 @@
   <data name="AppGreeting" xml:space="preserve">
     <value>Laipni lūdzam Moody Pal!</value>
   </data>
+  <data name="BreatheHold" xml:space="preserve">
+    <value>Turi elpu...</value>
+  </data>
   <data name="BreatheIn" xml:space="preserve">
     <value>Ieelpojam...</value>
   </data>

@@ -22,5 +22,13 @@ namespace kursadarbs_reactiveUI.Views
                 vm.StartTimer();
             }
         }
+
+        private void Breathing_view_Unloaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            if (DataContext is BreatheViewModel vm1)
+            {
+                vm1.StopTimer();
+            }
+        }
     }
 }

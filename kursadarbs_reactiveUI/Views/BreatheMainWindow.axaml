@@ -13,24 +13,22 @@
         Background="PaleTurquoise"
         Width="500"
         Height="400"
-        MaxWidth="600"
-        MaxHeight="400"
         MinHeight="200"
-        MinWidth="300"
+        MinWidth="350"
         WindowStartupLocation="CenterScreen">
  <Design.DataContext>
 	 <vm:BreatheMainWindowViewModel/>
  </Design.DataContext>
     <Grid RowDefinitions="*,auto" Margin="10">
-        <TransitioningContentControl Content="{Binding CurrentPage}" />
+        <TransitioningContentControl Grid.Row="0" Content="{Binding CurrentPage}" />
         <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="5"
 					HorizontalAlignment="Center">     
             <Button Command="{Binding NavigateNextCommand}" Content="Start"
                     Name="start_btn"
                     Click="start_btn_Click"
-                    IsEnabled="True"
-                    Background="Gray"
-                    Foreground="White"
+                    IsVisible="True"
+                    Foreground="Black"
+                    Background="LightGray"
                     Width="50"
                     HorizontalContentAlignment="Center"
                     
@@ -38,13 +36,57 @@
             <Button Command="{Binding NavigatePreviousCommand}" Content="Stop"
                     Name="stop_btn"
                     Click="stop_btn_Click"
-                    IsEnabled="False"
-                    Background="Gray"
-                    Foreground="White"
+                    IsVisible="False"
+                    Foreground="Black"
+                    Background="LightGray"
                     Width="50"
                     HorizontalContentAlignment="Center"
                     
                     />
+            <Button Command="{Binding NavigateToMenu}" Content="Try a different one"
+                    Name="differentexam_btn"
+                    Click="differentexam_btn_Click"
+                    IsVisible="True"
+                    Foreground="Black"
+                    Background="LightGray"
+                    Width="150"
+                    HorizontalContentAlignment="Center"/>
+         <Button Content="Box Breathing"
+                Name="box_btn"
+                Command="{Binding NavigateToBoxCommand}"
+                Click="box_btn_Click"
+                IsVisible="False"
+                FontSize="16"
+                Margin="0,20"
+                HorizontalAlignment="Stretch"
+                FontWeight="SemiBold"
+                Foreground="Black"
+                Background="LightGray"
+                HorizontalContentAlignment="Center"/>
+        <Button Content="4-7-8 Breathing"
+                Name="calmbreath_btn"
+                Command="{Binding NavigateTo478Command}"
+                Click="calmbreath_btn_Click"
+                IsVisible="False"
+                FontSize="16"
+                Margin="0,20"
+                Foreground="Black"
+                Background="LightGray"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                FontWeight="SemiBold"/>
+        <Button Content="Deep Breathing"
+                FontSize="16"
+                Name="deep_btn"
+                Command="{Binding NavigateToDeepCommand}"
+                Click="deep_btn_Click"
+                IsVisible="False"
+                Margin="0,20"
+                Foreground="Black"
+                Background="LightGray"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                FontWeight="SemiBold"/>
         </StackPanel>
     </Grid>
 </Window>

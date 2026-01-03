@@ -4,12 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="kursadarbs_reactiveUI.Views.BreatheMainView"
-             x:DataType="vm:BreatheMainViewModel"
-             Width="400">
-<Design.DataContext>
-	<vm:BreatheMainViewModel/>
-</Design.DataContext>
+             x:Class="kursadarbs_reactiveUI.Views.BreatheSelectionView"
+             x:DataType="vm:BreatheSelectionViewModel">
   <Grid VerticalAlignment="Top" Grid.Row="0" Width="300" HorizontalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="35"/>
@@ -27,36 +23,32 @@
                    VerticalAlignment="Top"
                    FontSize="22"
                    FontWeight="SemiBold"
-                   Text="Box Breathing"
+                   Text="What would you like to try?"
                    TextAlignment="Center"
                    TextWrapping="Wrap"
                    Foreground="Black"/>
-       <Label Grid.Row="1" Content="Before you begin:"
+       <Label Grid.Row="1" Content="Available options:"
          FontSize="16"
          HorizontalAlignment="Center"
-         HorizontalContentAlignment="Stretch"
+
          FontWeight="SemiBold"
          Foreground="Black"/>
-      <Label Grid.Row="2" Content="1. The exercise will approx. be 1 minute long"
+      <Label Grid.Row="2" Content="1. Box Breathing"
          FontSize="14"
          HorizontalAlignment="Center"
-         HorizontalContentAlignment="Stretch"
          Foreground="Black"/>
-       <Label Grid.Row="3"   Content="2. Make sure you are seated before doing"
+       <Label Grid.Row="3"   Content="2. 4-7-8 Breathing"
          FontSize="14"
          HorizontalAlignment="Center"
-         HorizontalContentAlignment="Stretch"
          Foreground="Black"/>
-      <Label Grid.Row="4"   Content="3. You'll see a confirmation when it ends"
+      <Label Grid.Row="4"   Content="3. Deep Breathing"
          FontSize="14"
-         HorizontalAlignment="Center"
-         HorizontalContentAlignment="Stretch"
+         HorizontalContentAlignment="Center"
          Foreground="Black"/>
-      <Label Grid.Row="5" Content="You can press start when ready"
-         FontSize="18"
+      <Label Grid.Row="5" Content="You can use the buttons to select"
+         FontSize="14"
          FontWeight="SemiBold"
          HorizontalAlignment="Center"
-         HorizontalContentAlignment="Stretch"
          Foreground="Black"/>
     </Grid>
 </UserControl>

@@ -1,18 +1,13 @@
 ﻿using ReactiveUI;
-using System.Reactive.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Reactive.Disposables;
-using kursadarbs_reactiveUI.Assets;
-using System.Globalization;
-
 
 namespace kursadarbs_reactiveUI.ViewModels
 {
-    public class BreatheViewModel : ViewModelBase
+    internal class CalmBreathingViewModel : ViewModelBase
     {
         public string BreatheText
         {
@@ -28,6 +23,7 @@ namespace kursadarbs_reactiveUI.ViewModels
         }
         private bool _isRunning;
         private int _step = 0;
+        public int elapsed = 0;
         public async void StartTimer()
         {
             if (_isRunning)
@@ -36,46 +32,57 @@ namespace kursadarbs_reactiveUI.ViewModels
             }
 
             int totalDurationMs = 64_000;   // 1 minute
-            int stepMs = 4_000;             // 5 seconds
-            int elapsed = 0;
+            elapsed = 0;
+            
             _isRunning = true;
 
-            
+
             while (_isRunning && elapsed < totalDurationMs)
             {
+                int step1 = 0;
+                int step2 = 0;
+                int step3 = 0;
+
                 if (_step == 0)
                 {
                     BreatheText = Assets.Resources.BreatheIn;
-                    //await Task.Delay(4000);
+                    await Task.Delay(4000);
+                    step1 = 4000;
                     //ShowFirst = true;
                 }
                 else if (_step == 1)
                 {
                     BreatheText = Assets.Resources.BreatheHold;
-                    //await Task.Delay(7000);
+                    await Task.Delay(7000);
+                    step2 = 7000;
                 }
                 else if (_step == 2)
                 {
                     BreatheText = Assets.Resources.BreatheOut;
                     //ShowFirst = false;
-                    //await Task.Delay(8000);
+                    await Task.Delay(8000);
+                    step3 = 8000;
                 }
                 else
                 {
                     BreatheText = Assets.Resources.BreatheHold;
+                    //ShowFirst = false;
+                    await Task.Delay(4000);
                 }
 
+                await Task.Delay(1000);
                 _step++;
                 if (_step > 3)
                 {
                     _step = 0;
                 }
 
-                await Task.Delay(stepMs);
-                elapsed += stepMs;
+                int cycle = step1 + step2 + step3;
+                //await Task.Delay(stepMs);
+                elapsed += cycle;
             }
             _isRunning = false;
-            BreatheText = "All done, press stop to end."; 
+            BreatheText = "All done, press stop to end.";
         }
         public void StopTimer()
         {

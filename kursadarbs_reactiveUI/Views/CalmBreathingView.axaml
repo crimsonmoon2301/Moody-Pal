@@ -2,17 +2,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:li="using:LoadingIndicators.Avalonia"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="kursadarbs_reactiveUI.Views.BreatheView"
-             x:DataType="vm:BreatheViewModel"
-             x:Name="Breathing_view"
-             Loaded="Breathing_view_Loaded"
-             Unloaded="Breathing_view_Unloaded">
-             
+             x:Class="kursadarbs_reactiveUI.Views.CalmBreathingView"
+             x:DataType="vm:CalmBreathingViewModel"
+             xmlns:li="using:LoadingIndicators.Avalonia"
+             x:Name="calmbreathing_view"
+             Loaded="calmbreathing_view_Loaded"
+             Unloaded="calmbreathing_view_Unloaded">
   <Design.DataContext>
-	 <vm:BreatheViewModel/>
+	 <vm:CalmBreathingViewModel/>
  </Design.DataContext>
     <StackPanel VerticalAlignment="Center" Spacing="5" MaxWidth="350">
         <TextBlock VerticalAlignment="Center"
@@ -23,7 +22,7 @@
                    TextWrapping="Wrap"
                    Foreground="Black"/>
         
-        <li:LoadingIndicator Mode="Pulse" SpeedRatio="0.4" />
+        <li:LoadingIndicator Mode="Arc" SpeedRatio="0.4" />
         
     </StackPanel>
 </UserControl>

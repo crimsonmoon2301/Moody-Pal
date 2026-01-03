@@ -120,6 +120,9 @@
   <data name="AppGreeting" xml:space="preserve">
     <value>Welcome to Moody Pal!</value>
   </data>
+  <data name="BreatheHold" xml:space="preserve">
+    <value>Hold it...</value>
+  </data>
   <data name="BreatheIn" xml:space="preserve">
     <value>Inhale...</value>
   </data>

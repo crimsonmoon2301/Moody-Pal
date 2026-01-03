@@ -70,6 +70,15 @@ namespace kursadarbs_reactiveUI.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hold it....
+        /// </summary>
+        public static string BreatheHold {
+            get {
+                return ResourceManager.GetString("BreatheHold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inhale....
         /// </summary>
         public static string BreatheIn {
