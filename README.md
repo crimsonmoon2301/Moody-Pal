@@ -15,4 +15,5 @@ TODO list:
 - Notes
 - Pomodoro timer
 - TODO list?
+- Persistence
 # Heavily WIP!
