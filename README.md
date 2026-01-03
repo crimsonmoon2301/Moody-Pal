@@ -9,9 +9,10 @@ Added features so far:
 - Splash screen with loading icon
 - Mood selector which adapts the app 
 - Language selector (for localization)
+- Breathing exercises
 
 TODO list:
 - Notes
 - Pomodoro timer
-- Breathing exercises
+- TODO list?
 # Heavily WIP!
