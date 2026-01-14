@@ -10,10 +10,10 @@ Added features so far:
 - Mood selector which adapts the app 
 - Language selector (for localization)
 - Breathing exercises
+- Focus timer (inspired off of Windows Clock)
+- Journal
+- To-Do list
 
 TODO list:
-- Notes
-- Pomodoro timer
-- TODO list?
 - Persistence
 # Heavily WIP!
