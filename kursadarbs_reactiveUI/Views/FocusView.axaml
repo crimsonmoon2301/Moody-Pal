@@ -1,0 +1,39 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="using:kursadarbs_reactiveUI"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="kursadarbs_reactiveUI.Views.FocusView"
+             x:DataType="vm:FocusViewModel"
+             Background="Transparent">
+    <Grid Margin="10" RowDefinitions="24, *, Auto" Background="Transparent">
+        <StackPanel>
+		    <TextBlock
+                Text="Focus session"
+                FontSize="14"
+                />		
+        </StackPanel>
+	    <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+			<Label HorizontalAlignment="Center" FontSize="30" Content="{Binding RemainingTime}" Margin="10" ></Label>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="50">
+                    <Button CornerRadius="50" Name="removetime_btn" HorizontalContentAlignment="Stretch" Command="{Binding RemoveTimeCommand}">
+                        <Label Content="-" FontWeight="Medium" FontSize="14" />   
+                    </Button>
+                    <Button CornerRadius="50" Name="addtime_btn" HorizontalContentAlignment="Stretch" Command="{Binding AddTimeCommand}">
+                        <Label Content="+" FontWeight="Medium" FontSize="14" />
+                    </Button>
+        </StackPanel>
+       </StackPanel>
+        
+        
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Spacing="10">
+			<Button FontSize="14" Name="starttimer_btn" Click="starttimer_btn_Click" IsVisible="True" Content="Start Timer" Command="{Binding StartTimerCommand}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Button FontSize="14" Name="pausetimer_btn" Click="pausetimer_btn_Click" IsVisible="False" Command="{Binding PauseTimerCommand}" Content="Pause Timer" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Button FontSize="14" Name="stoptimer_btn" Click="stoptimer_btn_Click" Content="Reset Timer" Command="{Binding StopTimerCommand}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+  
+
+</UserControl>

@@ -12,5 +12,6 @@ namespace kursadarbs_reactiveUI.Models
         public bool IsChecked { get; set; }
 
         public string? Content { get; set; }
+        public bool IsEnabled { get; set; }
     }
 }

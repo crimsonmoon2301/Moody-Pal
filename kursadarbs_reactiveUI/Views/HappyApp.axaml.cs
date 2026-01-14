@@ -17,9 +17,9 @@ public partial class HappyApp : Window
     }
     private HappyAppViewModel VM => (HappyAppViewModel)DataContext!;
 
-    private void Notes_Click(object? s, RoutedEventArgs e) => VM.ShowNotes();
+    private void Journal_Click(object? s, RoutedEventArgs e) => VM.ShowNotes();
     private void Todo_Click(object? s, RoutedEventArgs e) => VM.ShowTodo();
-    private void Pomo_Click(object? s, RoutedEventArgs e) => VM.ShowPomo();
+    private void Focus_Click(object? s, RoutedEventArgs e) => VM.ShowFocus();
 
     private void langselect_eng_Click(object? sender, RoutedEventArgs e)
     {

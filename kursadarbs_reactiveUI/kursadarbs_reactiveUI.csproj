@@ -64,6 +64,9 @@
     <Compile Update="Views\CalmBreathingMainView.axaml.cs">
       <DependentUpon>CalmBreathingMainView.axaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\FocusView.axaml.cs">
+      <DependentUpon>FocusView.axaml</DependentUpon>
+    </Compile>
 	  
     <EmbeddedResource Update="Assets\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

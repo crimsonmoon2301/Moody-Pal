@@ -19,7 +19,7 @@ namespace kursadarbs_reactiveUI.ViewModels
         private readonly ViewModelBase[] Pages =
         {
             new NotesViewModel(),
-            new PomodoroViewModel(),
+            new FocusViewModel(),
             new ToDoViewModel()
         };
         private ViewModelBase _CurrentPage;
@@ -32,7 +32,7 @@ namespace kursadarbs_reactiveUI.ViewModels
         {
             CurrentPage = Pages[0];
         }
-        public void ShowPomo()
+        public void ShowFocus()
         {
             CurrentPage = Pages[1];
         }

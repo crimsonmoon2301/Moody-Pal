@@ -104,7 +104,7 @@ namespace kursadarbs_reactiveUI.Views
             var oldwindow = this;
             refreshwindow.Show();
             oldwindow.Close();
-            
+
         }
     }
 }

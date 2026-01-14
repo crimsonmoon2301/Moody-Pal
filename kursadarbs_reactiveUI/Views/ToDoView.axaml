@@ -13,7 +13,7 @@
           x:Name="Root">
 
         <!-- This is our title text block. We use Style.Classes to style it accordingly -->
-        <TextBlock Text="My ToDo-List" Classes="h1" />
+        <TextBlock Text="To-Do List" Classes="h1" />
 
         <ScrollViewer Grid.Row="1">
             <!-- This ItemsControl show all added ToDoItems. -->
@@ -30,11 +30,10 @@
                             <!-- Note how we use the Root-Grid to get the MainViewModel here. As we use compiled bindings we have to cast the DataContext -->
                             <!-- The command parameter is the local ToDoItemViewModel being processed --> 
                             <Button Grid.Column="1"
-                                    
-                                    CommandParameter="{Binding .}">
-                                <PathIcon Data="{DynamicResource DeleteIconData}"
-                                          Height="15"
-                                          Foreground="Red" />
+                                    Command="{Binding #Root.((vm:ToDoViewModel)DataContext).RemoveItemCommand}"
+                                    CommandParameter="{Binding}"
+                                    Content="Delete">
+                                
                             </Button>
                         </Grid>
                     </DataTemplate>
@@ -44,17 +43,16 @@
 
         <!-- This TextBox can be used to add new ToDoItems -->
         <TextBox Grid.Row="2"
-                 Text=""
+                 Text="{Binding NewItemContent, Mode=TwoWay}"
                  Watermark="Add a new Item">
             <TextBox.InnerRightContent>
-                <Button>
-                    <PathIcon Data="{DynamicResource AcceptIconData}"
-                              Foreground="Green" />
-                </Button>
+                <Button Command="{Binding AddItemCommand}"
+                        Content="Add"/>
             </TextBox.InnerRightContent>
             <!-- KeyBindings allow us to define KeyGestures  -->
             <TextBox.KeyBindings>
-                <KeyBinding Gesture="Enter" />
+                <KeyBinding Gesture="Enter" 
+                            Command="{Binding AddItemCommand}"/>
             </TextBox.KeyBindings>
         </TextBox>
     </Grid>

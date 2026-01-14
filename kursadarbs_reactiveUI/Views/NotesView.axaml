@@ -5,59 +5,47 @@
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
              mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="450"
              x:Class="kursadarbs_reactiveUI.Views.NotesView"
-             x:DataType="vm:NotesViewModel">
+             x:DataType="vm:NotesViewModel"
+             Background="Transparent">
 <Design.DataContext>
 	<vm:NotesViewModel/>
 </Design.DataContext>
-    <Grid x:Name="ContentArea" Width="700" Height="450">
-        <RelativePanel Width="600" Height="350" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <ComboBox Name="NotesSearch"
-                            Margin="0,-48,0,16"
-                            Width="200"
-                            RelativePanel.AlignRightWithPanel="True"
-                            RelativePanel.AlignTopWithPanel="True"/>
-            <ListBox Width="600" Height="280" Name="LstNotes"
-                      CornerRadius="2"
-                      RelativePanel.AlignLeftWithPanel="True"
-                      RelativePanel.AlignRightWithPanel="True"
-                      RelativePanel.AlignTopWithPanel="True"
-                      RelativePanel.AlignBottomWithPanel="True"
-                      BorderThickness="0"
-                      Margin="0,0,0,64">
+    <Grid RowDefinitions="Auto, *, Auto"
+          ColumnDefinitions="250,*"
+          x:Name="Root"
+          Margin="5">
+
+        <TextBlock Text="Journal Entries" Classes="h1" Margin="10"/>
+        <!-- This TextBox can be used to add new journal entries -->
+        <ListBox Grid.Row="1" Grid.Column="0" ItemsSource="{Binding JournalItems}" Margin="0,0,0,5"
+                 SelectedItem="{Binding Selected}">
+            <ListBox.ItemTemplate>
+				<DataTemplate>
+					<TextBlock Text="{Binding Title}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
             </ListBox>
-            <TextBlock Name="EmptyText"
-                       FontWeight="Light"
-                       IsVisible="False"
-                       Margin="0,32,0,0"
-                       FontSize="16"
-                       HorizontalAlignment="Center"
-                       RelativePanel.AlignLeftWithPanel="True"
-                       RelativePanel.AlignRightWithPanel="True"/>
-            <Button 
-                    Name="newNote"
-                    RelativePanel.AlignBottomWithPanel="True"
-                    RelativePanel.LeftOf="deleteNote"
-                    MinWidth="250"
-                    Width="250"
-                    Height="40"
-                    Margin="0,0,0,16"/>
-            <Button 
-                    IsEnabled="False"
-                    Name="deleteNote"
-                    RelativePanel.AlignBottomWithPanel="True"
-                    RelativePanel.AlignRightWithPanel="True"
-                    Width="50"
-                    Height="40"
-                    Margin="16,0,0,16">
-                <Button.Flyout>
-                    <Flyout>
-                        <StackPanel MaxWidth="420">
-                            <TextBlock Name="deleteFlyout" Margin="0,0,0,16" />
-                            <Button Name="deleteNoteFly"/>
-                        </StackPanel>
-                    </Flyout>
-                </Button.Flyout>
-            </Button>
-        </RelativePanel>
+        <Grid Grid.Row="2" Grid.Column="0" ColumnDefinitions="*,*">
+			<Button  Grid.Column="0" Command="{Binding AddEntryCommand}"
+                        Content="Add a entry"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Center"/>
+            <Button Grid.Column="1" Command="{Binding RemoveEntryCommand}"
+                        Content="Remove a entry"
+                        IsEnabled="{Binding Selected}"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Center"/>
+        </Grid>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Entry Title" HorizontalAlignment="Right" Classes="h1" Margin="10"/>
+        <Grid Grid.Column="1" Grid.Row="1" RowDefinitions="Auto,Auto,Auto,*">
+        <TextBox Grid.Row="0" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Column="2" Text="{Binding Selected.Title, Mode=TwoWay}" AcceptsReturn="True" Watermark="No entry selected. Create one!" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="1" Text="Entry Content" HorizontalAlignment="Right" VerticalAlignment="Top" Classes="h1" Margin="10"/>	
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="10,0,0,5" Text="{Binding Selected.Content, Mode=TwoWay}" Watermark="This is empty. Maybe start with how you're feeling?"
+                 TextWrapping="Wrap"
+                 AcceptsReturn="True"/>
+        </Grid>
+       
     </Grid>
 </UserControl>
