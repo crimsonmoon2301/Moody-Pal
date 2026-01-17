@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+             xmlns:assets="using:kursadarbs_reactiveUI.Assets"
              mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="450"
              x:Class="kursadarbs_reactiveUI.Views.NotesView"
              x:DataType="vm:NotesViewModel"
@@ -15,7 +16,7 @@
           x:Name="Root"
           Margin="5">
 
-        <TextBlock Text="Journal Entries" Classes="h1" Margin="10"/>
+        <TextBlock Text="{x:Static assets:Resources.JournalTitle}" Classes="h1" Margin="10"/>
         <!-- This TextBox can be used to add new journal entries -->
         <ListBox Grid.Row="1" Grid.Column="0" ItemsSource="{Binding JournalItems}" Margin="0,0,0,5"
                  SelectedItem="{Binding Selected}">
@@ -27,22 +28,22 @@
             </ListBox>
         <Grid Grid.Row="2" Grid.Column="0" ColumnDefinitions="*,*">
 			<Button  Grid.Column="0" Command="{Binding AddEntryCommand}"
-                        Content="Add a entry"
+                        Content="{x:Static assets:Resources.JournalButton}"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         HorizontalContentAlignment="Center"/>
             <Button Grid.Column="1" Command="{Binding RemoveEntryCommand}"
-                        Content="Remove a entry"
+                        Content="{x:Static assets:Resources.JournalButton1}"
                         IsEnabled="{Binding Selected}"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         HorizontalContentAlignment="Center"/>
         </Grid>
-        <TextBlock Grid.Row="0" Grid.Column="1" Text="Entry Title" HorizontalAlignment="Right" Classes="h1" Margin="10"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static assets:Resources.JournalTitle1}" HorizontalAlignment="Right" Classes="h1" Margin="10"/>
         <Grid Grid.Column="1" Grid.Row="1" RowDefinitions="Auto,Auto,Auto,*">
-        <TextBox Grid.Row="0" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Column="2" Text="{Binding Selected.Title, Mode=TwoWay}" AcceptsReturn="True" Watermark="No entry selected. Create one!" TextWrapping="Wrap"/>
-        <TextBlock Grid.Row="1" Text="Entry Content" HorizontalAlignment="Right" VerticalAlignment="Top" Classes="h1" Margin="10"/>	
-        <TextBox Grid.Row="3" Grid.Column="1" Margin="10,0,0,5" Text="{Binding Selected.Content, Mode=TwoWay}" Watermark="This is empty. Maybe start with how you're feeling?"
+        <TextBox Grid.Row="0" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Column="2" Text="{Binding Selected.Title, Mode=TwoWay}" AcceptsReturn="True" Watermark="{x:Static assets:Resources.JournalWatermark}" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="1" Text="{x:Static assets:Resources.JournalTitle2}" HorizontalAlignment="Right" VerticalAlignment="Top" Classes="h1" Margin="10"/>	
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="10,0,0,5" Text="{Binding Selected.Content, Mode=TwoWay}" Watermark="{x:Static assets:Resources.JournalWatermark1}"
                  TextWrapping="Wrap"
                  AcceptsReturn="True"/>
         </Grid>

@@ -120,6 +120,18 @@
   <data name="AppGreeting" xml:space="preserve">
     <value>Laipni lūdzam Moody Pal!</value>
   </data>
+  <data name="AppTitleButton" xml:space="preserve">
+    <value>Dienasgrāmata</value>
+  </data>
+  <data name="AppTitleButton1" xml:space="preserve">
+    <value>Fokusa Taimeris</value>
+  </data>
+  <data name="AppTitleButton2" xml:space="preserve">
+    <value>Plānotājs</value>
+  </data>
+  <data name="AppTitleButton3" xml:space="preserve">
+    <value>Elpošanas vingrinājumi</value>
+  </data>
   <data name="BreatheHold" xml:space="preserve">
     <value>Turi elpu...</value>
   </data>
@@ -144,8 +156,20 @@
   <data name="Infotip_nerv" xml:space="preserve">
     <value>Programma piedāvās elpošanas vingrinājums pirms sākšanas, krāsas būs gaišākas, kuras neizraisa emocijas.</value>
   </data>
+  <data name="JournalButton" xml:space="preserve">
+    <value>Jauns ieraksts</value>
+  </data>
+  <data name="JournalTitle" xml:space="preserve">
+    <value>Dienasgrāmatu ieraksti</value>
+  </data>
+  <data name="JournalButton1" xml:space="preserve">
+    <value>Izdzēst ierakstu</value>
+  </data>
   <data name="LangSelect_title" xml:space="preserve">
     <value>Valodas:</value>
+  </data>
+  <data name="MoodButton" xml:space="preserve">
+    <value>Atpakaļ uz noskaņojuma izvēlni</value>
   </data>
   <data name="MoodCard_annoyed" xml:space="preserve">
     <value>Aizkaitināts</value>
@@ -167,5 +191,107 @@
   </data>
   <data name="StartupMessage" xml:space="preserve">
     <value>Notiek ielāde... Lūdzu uzgaidīt</value>
+  </data>
+  <data name="JournalTitle1" xml:space="preserve">
+    <value>Ieraksta galvene</value>
+  </data>
+  <data name="JournalTitle2" xml:space="preserve">
+    <value>Saturs</value>
+  </data>
+  <data name="JournalWatermark" xml:space="preserve">
+    <value>Nav izvēlēts ieraksts. Izveido vienu!</value>
+  </data>
+  <data name="JournalWatermark1" xml:space="preserve">
+    <value>Šis ieraksts ir tukšs. Varbūt sāc ar to kā jūties?</value>
+  </data>
+  <data name="CreateEntry" xml:space="preserve">
+    <value>Jaunizveidots ieraksts</value>
+  </data>
+  <data name="ToDoTitle" xml:space="preserve">
+    <value>Plānotājs</value>
+  </data>
+  <data name="ToDoRemove" xml:space="preserve">
+    <value>Noņemt</value>
+  </data>
+  <data name="ToDoAdd" xml:space="preserve">
+    <value>Pievienot</value>
+  </data>
+  <data name="ToDoWatermark" xml:space="preserve">
+    <value>Pievienot jaunu ierakstu</value>
+  </data>
+  <data name="TimerStart" xml:space="preserve">
+    <value>Sākt Taimeri</value>
+  </data>
+  <data name="TimerPause" xml:space="preserve">
+    <value>Iepauzēt Taimeri</value>
+  </data>
+  <data name="TimerStop" xml:space="preserve">
+    <value>Apturēt Taimeri</value>
+  </data>
+  <data name="TimerTitle" xml:space="preserve">
+    <value>Fokusa Sesija</value>
+  </data>
+  <data name="BreathingTitle" xml:space="preserve">
+    <value>Pirms sākšanas:</value>
+  </data>
+  <data name="BreathingTitle1" xml:space="preserve">
+    <value>Vingrinājums ilgs 1 minūti</value>
+  </data>
+  <data name="BreathingTitle2" xml:space="preserve">
+    <value>Esi sēdošā pozīcijā darot vingrinājumu</value>
+  </data>
+  <data name="BreathingTitle3" xml:space="preserve">
+    <value>Redzēsi apstiprinājumu kad beidzas vingrinājums</value>
+  </data>
+  <data name="BreathingTitle4" xml:space="preserve">
+    <value>Vari spiest "Sākt" tiklīdz gatavs</value>
+  </data>
+  <data name="BreatheDone" xml:space="preserve">
+    <value>Viss gatavs. Vari droši aizvērt logu.</value>
+  </data>
+  <data name="DeepBreathing5" xml:space="preserve">
+    <value>Turi 5 sekundes...</value>
+  </data>
+  <data name="DeepBreathing4" xml:space="preserve">
+    <value>Turi 4 sekundes...</value>
+  </data>
+  <data name="DeepBreathing3" xml:space="preserve">
+    <value>Turi 3 sekundes...</value>
+  </data>
+  <data name="DeepBreathing2" xml:space="preserve">
+    <value>Turi 2 sekundes...</value>
+  </data>
+  <data name="DeepBreathing1" xml:space="preserve">
+    <value>Turi 1 sekundi...</value>
+  </data>
+  <data name="DeepBreathingExhale" xml:space="preserve">
+    <value>Lēni izelpo caur degunu...</value>
+  </data>
+  <data name="BreathingSelection" xml:space="preserve">
+    <value>Pieejamās opcijas:</value>
+  </data>
+  <data name="BreathingQuestion" xml:space="preserve">
+    <value>Kuru vēlies pamēģināt?</value>
+  </data>
+  <data name="BreathingOption1" xml:space="preserve">
+    <value>Kastes elpošana</value>
+  </data>
+  <data name="BreathingOption2" xml:space="preserve">
+    <value>4-7-8 elpošana</value>
+  </data>
+  <data name="BreathingOption3" xml:space="preserve">
+    <value>Dziļā elpošana</value>
+  </data>
+  <data name="BreathingSelection1" xml:space="preserve">
+    <value>Lieto pogas, lai izvēlētos</value>
+  </data>
+  <data name="BreathingStart" xml:space="preserve">
+    <value>Sākt</value>
+  </data>
+  <data name="BreathingStop" xml:space="preserve">
+    <value>Apturēt</value>
+  </data>
+  <data name="BreathingAlternative" xml:space="preserve">
+    <value>Izmēģini citu</value>
   </data>
 </root>

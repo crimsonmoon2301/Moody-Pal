@@ -4,6 +4,7 @@
              xmlns:local="using:kursadarbs_reactiveUI"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+             xmlns:assets="using:kursadarbs_reactiveUI.Assets"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="kursadarbs_reactiveUI.Views.FocusView"
              x:DataType="vm:FocusViewModel"
@@ -11,7 +12,7 @@
     <Grid Margin="10" RowDefinitions="24, *, Auto" Background="Transparent">
         <StackPanel>
 		    <TextBlock
-                Text="Focus session"
+                Text="{x:Static assets:Resources.TimerTitle}"
                 FontSize="14"
                 />		
         </StackPanel>
@@ -29,9 +30,9 @@
         
         
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Spacing="10">
-			<Button FontSize="14" Name="starttimer_btn" Click="starttimer_btn_Click" IsVisible="True" Content="Start Timer" Command="{Binding StartTimerCommand}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
-            <Button FontSize="14" Name="pausetimer_btn" Click="pausetimer_btn_Click" IsVisible="False" Command="{Binding PauseTimerCommand}" Content="Pause Timer" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
-            <Button FontSize="14" Name="stoptimer_btn" Click="stoptimer_btn_Click" Content="Reset Timer" Command="{Binding StopTimerCommand}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+			<Button FontSize="14" Name="starttimer_btn" Click="starttimer_btn_Click" IsVisible="True" Content="{x:Static assets:Resources.TimerStart}" Command="{Binding StartTimerCommand}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Button FontSize="14" Name="pausetimer_btn" Click="pausetimer_btn_Click" IsVisible="False" Command="{Binding PauseTimerCommand}" Content="{x:Static assets:Resources.TimerPause}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Button FontSize="14" Name="stoptimer_btn" Click="stoptimer_btn_Click" Content="{x:Static assets:Resources.TimerStop}" Command="{Binding StopTimerCommand}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
         </StackPanel>
     </Grid>
   

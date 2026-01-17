@@ -8,6 +8,7 @@ using System.Reactive;
 using System.Text;
 using System.Threading.Tasks;
 using kursadarbs_reactiveUI.Models;
+using kursadarbs_reactiveUI.Assets;
 
 namespace kursadarbs_reactiveUI.ViewModels
 {
@@ -54,9 +55,15 @@ namespace kursadarbs_reactiveUI.ViewModels
         private DateTime _created;
         public void AddEntry()
         {
+            //var entry = new JournalItem
+            //{
+            //    Title="New Journal Entry",
+            //    Content = "",
+            //    Created = DateTime.Now
+            //};
             var entry = new JournalItem
             {
-                Title="New Journal Entry",
+                Title = Assets.Resources.CreateEntry,
                 Content = "",
                 Created = DateTime.Now
             };

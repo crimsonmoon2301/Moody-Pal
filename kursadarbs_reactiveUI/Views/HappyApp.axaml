@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+        xmlns:assets="using:kursadarbs_reactiveUI.Assets"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.HappyApp"
         x:DataType="vm:HappyAppViewModel"
@@ -45,15 +46,15 @@
                         Background="#22FFFFFF">
 				<StackPanel Grid.Row="1" Name="RadioButtonPanel">
                 
-                <Button Content="Journal"
+                <Button Content="{x:Static assets:Resources.AppTitleButton}"
                              Click="Journal_Click"
                              Height="50" Foreground="White"
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
                              VerticalContentAlignment="Center"
-                             FontSize="14"
+                             FontSize="13"
                              Margin="5"/>
-                <Button Content="Focus timer"
+                <Button Content="{x:Static assets:Resources.AppTitleButton1}"
                              Click="Focus_Click"
                              Height="50"
                              Margin="5"
@@ -61,8 +62,8 @@
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
                              VerticalContentAlignment="Center"
-                             FontSize="14"/>
-                <Button Content="To-Do List"
+                             FontSize="13"/>
+                <Button Content="{x:Static assets:Resources.AppTitleButton2}"
                              x:Name="todo_btn"
                              Click="Todo_Click"
                              Height="50"
@@ -71,8 +72,8 @@
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
                              VerticalContentAlignment="Center"
-                             FontSize="14"/>
-                 <Button Content="Breathing exercises"
+                             FontSize="13"/>
+                 <Button Content="{x:Static assets:Resources.AppTitleButton3}"
                     Height="50"
                     Margin="5"
                     Foreground="White"
@@ -81,7 +82,7 @@
                     HorizontalAlignment="Stretch"
                     HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
-                    FontSize="14"/>
+                    FontSize="13"/>
             </StackPanel>
             </Border>
             <StackPanel 
@@ -91,7 +92,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Right">
                         <Label
-                           Content="Languages:"
+                           Content="{x:Static assets:Resources.LangSelect_title}"
                            FontSize="14"
                            HorizontalAlignment="Right"
                            VerticalAlignment="Center"
@@ -117,7 +118,7 @@
                     Grid.Row="0"
                     Grid.Column="1"
                     Margin="8"
-                    Content="Back to Mood Selector"
+                    Content="{x:Static assets:Resources.MoodButton}"
                     Click="moodselect_btn_Click"
                     FontSize="12"
                     Height="30"

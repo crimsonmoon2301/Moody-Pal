@@ -70,6 +70,51 @@ namespace kursadarbs_reactiveUI.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Journal.
+        /// </summary>
+        public static string AppTitleButton {
+            get {
+                return ResourceManager.GetString("AppTitleButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Focus Timer.
+        /// </summary>
+        public static string AppTitleButton1 {
+            get {
+                return ResourceManager.GetString("AppTitleButton1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To-Do List.
+        /// </summary>
+        public static string AppTitleButton2 {
+            get {
+                return ResourceManager.GetString("AppTitleButton2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breathing Exercises.
+        /// </summary>
+        public static string AppTitleButton3 {
+            get {
+                return ResourceManager.GetString("AppTitleButton3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All done. You can close this now.
+        /// </summary>
+        public static string BreatheDone {
+            get {
+                return ResourceManager.GetString("BreatheDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hold it....
         /// </summary>
         public static string BreatheHold {
@@ -93,6 +138,195 @@ namespace kursadarbs_reactiveUI.Assets {
         public static string BreatheOut {
             get {
                 return ResourceManager.GetString("BreatheOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Try a different one.
+        /// </summary>
+        public static string BreathingAlternative {
+            get {
+                return ResourceManager.GetString("BreathingAlternative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Box Breathing.
+        /// </summary>
+        public static string BreathingOption1 {
+            get {
+                return ResourceManager.GetString("BreathingOption1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-7-8 Breathing.
+        /// </summary>
+        public static string BreathingOption2 {
+            get {
+                return ResourceManager.GetString("BreathingOption2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deep Breathing.
+        /// </summary>
+        public static string BreathingOption3 {
+            get {
+                return ResourceManager.GetString("BreathingOption3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What would you like to try?.
+        /// </summary>
+        public static string BreathingQuestion {
+            get {
+                return ResourceManager.GetString("BreathingQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Available options:.
+        /// </summary>
+        public static string BreathingSelection {
+            get {
+                return ResourceManager.GetString("BreathingSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use the buttons to select.
+        /// </summary>
+        public static string BreathingSelection1 {
+            get {
+                return ResourceManager.GetString("BreathingSelection1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        public static string BreathingStart {
+            get {
+                return ResourceManager.GetString("BreathingStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stop.
+        /// </summary>
+        public static string BreathingStop {
+            get {
+                return ResourceManager.GetString("BreathingStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Before you begin:.
+        /// </summary>
+        public static string BreathingTitle {
+            get {
+                return ResourceManager.GetString("BreathingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The exercise will be approx. 1 minute long.
+        /// </summary>
+        public static string BreathingTitle1 {
+            get {
+                return ResourceManager.GetString("BreathingTitle1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make sure you are seated while doing this.
+        /// </summary>
+        public static string BreathingTitle2 {
+            get {
+                return ResourceManager.GetString("BreathingTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You will see confirmation when this ends.
+        /// </summary>
+        public static string BreathingTitle3 {
+            get {
+                return ResourceManager.GetString("BreathingTitle3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can press &quot;Start&quot; whenever ready.
+        /// </summary>
+        public static string BreathingTitle4 {
+            get {
+                return ResourceManager.GetString("BreathingTitle4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Journal Entry.
+        /// </summary>
+        public static string CreateEntry {
+            get {
+                return ResourceManager.GetString("CreateEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hold it for 1....
+        /// </summary>
+        public static string DeepBreathing1 {
+            get {
+                return ResourceManager.GetString("DeepBreathing1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hold it for 2....
+        /// </summary>
+        public static string DeepBreathing2 {
+            get {
+                return ResourceManager.GetString("DeepBreathing2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hold it for 3....
+        /// </summary>
+        public static string DeepBreathing3 {
+            get {
+                return ResourceManager.GetString("DeepBreathing3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hold it for 4....
+        /// </summary>
+        public static string DeepBreathing4 {
+            get {
+                return ResourceManager.GetString("DeepBreathing4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hold it for 5....
+        /// </summary>
+        public static string DeepBreathing5 {
+            get {
+                return ResourceManager.GetString("DeepBreathing5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exhale slowly through nose....
+        /// </summary>
+        public static string DeepBreathingExhale {
+            get {
+                return ResourceManager.GetString("DeepBreathingExhale", resourceCulture);
             }
         }
         
@@ -142,11 +376,83 @@ namespace kursadarbs_reactiveUI.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add a entry.
+        /// </summary>
+        public static string JournalButton {
+            get {
+                return ResourceManager.GetString("JournalButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove a entry.
+        /// </summary>
+        public static string JournalButton1 {
+            get {
+                return ResourceManager.GetString("JournalButton1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Journal Entries.
+        /// </summary>
+        public static string JournalTitle {
+            get {
+                return ResourceManager.GetString("JournalTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Journal Title.
+        /// </summary>
+        public static string JournalTitle1 {
+            get {
+                return ResourceManager.GetString("JournalTitle1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Entry Content.
+        /// </summary>
+        public static string JournalTitle2 {
+            get {
+                return ResourceManager.GetString("JournalTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Entry selected. Create one!.
+        /// </summary>
+        public static string JournalWatermark {
+            get {
+                return ResourceManager.GetString("JournalWatermark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is empty. Maybe start with how you&apos;re feeling?.
+        /// </summary>
+        public static string JournalWatermark1 {
+            get {
+                return ResourceManager.GetString("JournalWatermark1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Languages:.
         /// </summary>
         public static string LangSelect_title {
             get {
                 return ResourceManager.GetString("LangSelect_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back to Mood Selector.
+        /// </summary>
+        public static string MoodButton {
+            get {
+                return ResourceManager.GetString("MoodButton", resourceCulture);
             }
         }
         
@@ -210,6 +516,78 @@ namespace kursadarbs_reactiveUI.Assets {
         public static string StartupMessage {
             get {
                 return ResourceManager.GetString("StartupMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pause Timer.
+        /// </summary>
+        public static string TimerPause {
+            get {
+                return ResourceManager.GetString("TimerPause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Timer.
+        /// </summary>
+        public static string TimerStart {
+            get {
+                return ResourceManager.GetString("TimerStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timer Stop.
+        /// </summary>
+        public static string TimerStop {
+            get {
+                return ResourceManager.GetString("TimerStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Focus Session.
+        /// </summary>
+        public static string TimerTitle {
+            get {
+                return ResourceManager.GetString("TimerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string ToDoAdd {
+            get {
+                return ResourceManager.GetString("ToDoAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string ToDoRemove {
+            get {
+                return ResourceManager.GetString("ToDoRemove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To-Do List.
+        /// </summary>
+        public static string ToDoTitle {
+            get {
+                return ResourceManager.GetString("ToDoTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add a new Item.
+        /// </summary>
+        public static string ToDoWatermark {
+            get {
+                return ResourceManager.GetString("ToDoWatermark", resourceCulture);
             }
         }
     }

@@ -50,40 +50,40 @@ namespace kursadarbs_reactiveUI.ViewModels
                 }
                 else if (_step == 1)
                 {
-                    BreatheText = "Hold it for 5...";
+                    BreatheText = Assets.Resources.DeepBreathing5;
                     await Task.Delay(tick);
                     elapsed += tick;
                    
                 }
                 else if (_step == 2)
                 {
-                    BreatheText = "Hold it for 4...";
+                    BreatheText = Assets.Resources.DeepBreathing4;
                     //ShowFirst = false;
                     await Task.Delay(tick);
                     elapsed += tick;
                 }
                 else if (_step == 3)
                 {
-                    BreatheText = "Hold it for 3...";
+                    BreatheText = Assets.Resources.DeepBreathing3;
                     //ShowFirst = false;
                     await Task.Delay(tick);
                     elapsed += tick;
                 }
                 else if (_step == 4)
                 {
-                    BreatheText = "Hold it for 2...";
+                    BreatheText = Assets.Resources.DeepBreathing2;
                     await Task.Delay(tick);
                     elapsed += tick;
                 }
                 else if (_step == 5)
                 {
-                    BreatheText = "Hold it for 1...";
+                    BreatheText = Assets.Resources.DeepBreathing1;
                     await Task.Delay(tick);
                     elapsed += tick;
                 }
                 else
                 {
-                    BreatheText = "Exhale slowly through nose...";
+                    BreatheText = Assets.Resources.DeepBreathingExhale;
                     await Task.Delay(step);
                     elapsed += step;
                 }
@@ -95,7 +95,7 @@ namespace kursadarbs_reactiveUI.ViewModels
                 //await Task.Delay(stepMs);
             }
             _isRunning = false;
-            BreatheText = "All done, press stop to end.";
+            BreatheText = Assets.Resources.BreatheDone;
         }
         public void StopTimer()
         {

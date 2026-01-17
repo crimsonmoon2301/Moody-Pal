@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:assets="using:kursadarbs_reactiveUI.Assets"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="kursadarbs_reactiveUI.Views.CalmBreathingMainView"
@@ -10,7 +11,7 @@
   <Design.DataContext>
 	<vm:CalmBreathingMainViewModel/>
 </Design.DataContext>
-  <Grid VerticalAlignment="Top" Grid.Row="0" Width="300" HorizontalAlignment="Center">
+  <Grid VerticalAlignment="Top" Grid.Row="0" Width="400" HorizontalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="35"/>
                 <RowDefinition Height="Auto"/>
@@ -27,33 +28,33 @@
                    VerticalAlignment="Top"
                    FontSize="22"
                    FontWeight="SemiBold"
-                   Text="4-7-8 Breathing"
+                   Text="{x:Static assets:Resources.BreathingOption2}"
                    TextAlignment="Center"
                    TextWrapping="Wrap"
                    Foreground="Black"/>
-       <Label Grid.Row="1" Content="Before you begin:"
+       <Label Grid.Row="1" Content="{x:Static assets:Resources.BreathingTitle}"
          FontSize="16"
          HorizontalAlignment="Center"
          HorizontalContentAlignment="Stretch"
          FontWeight="SemiBold"
          Foreground="Black"/>
-      <Label Grid.Row="2" Content="1. The exercise will approx. be 1 minute long"
+      <Label Grid.Row="2" Content="{x:Static assets:Resources.BreathingTitle1}"
          FontSize="14"
          HorizontalAlignment="Center"
          HorizontalContentAlignment="Stretch"
          Foreground="Black"/>
-       <Label Grid.Row="3"   Content="2. Make sure you are seated before doing"
+       <Label Grid.Row="3"   Content="{x:Static assets:Resources.BreathingTitle2}"
          FontSize="14"
          HorizontalAlignment="Center"
          HorizontalContentAlignment="Stretch"
          Foreground="Black"/>
-      <Label Grid.Row="4"   Content="3. You'll see a confirmation when it ends"
+      <Label Grid.Row="4"   Content="{x:Static assets:Resources.BreathingTitle3}"
          FontSize="14"
          HorizontalAlignment="Center"
          HorizontalContentAlignment="Stretch"
          Foreground="Black"/>
-      <Label Grid.Row="5" Content="You can press start when ready"
-         FontSize="18"
+      <Label Grid.Row="5" Content="{x:Static assets:Resources.BreathingTitle4}"
+         FontSize="16"
          FontWeight="SemiBold"
          HorizontalAlignment="Center"
          HorizontalContentAlignment="Stretch"

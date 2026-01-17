@@ -82,7 +82,7 @@ namespace kursadarbs_reactiveUI.ViewModels
                 elapsed += cycle;
             }
             _isRunning = false;
-            BreatheText = "All done, press stop to end.";
+            BreatheText = Assets.Resources.BreatheDone;
         }
         public void StopTimer()
         {

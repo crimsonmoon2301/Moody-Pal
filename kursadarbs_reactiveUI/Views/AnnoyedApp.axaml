@@ -2,8 +2,145 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+        xmlns:assets="using:kursadarbs_reactiveUI.Assets"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.AnnoyedApp"
+        x:DataType="vm:AnnoyedAppViewModel"
         Title="AnnoyedApp">
-  This is the annoyed part of the app
+ <Border CornerRadius="10">
+        <Grid Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Moody Pal"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"
+                       FontSize="18"
+                       Margin="0"/>
+                <Border
+                    Grid.Row="1"
+                        Margin="10"
+                        CornerRadius="8"
+                        BorderThickness="1.5"
+                        BorderBrush="#55FFFFFF"
+                        Background="#22FFFFFF">
+				<StackPanel Grid.Row="1" Name="RadioButtonPanel">
+                
+                <Button Content="{x:Static assets:Resources.AppTitleButton}"
+                             Click="Journal_Click"
+                             Height="50" Foreground="White"
+                             HorizontalAlignment="Stretch"
+                             HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center"
+                             FontSize="13"
+                             Margin="5"/>
+                <Button Content="{x:Static assets:Resources.AppTitleButton1}"
+                             Click="Focus_Click"
+                             Height="50"
+                             Margin="5"
+                             Foreground="White"
+                             HorizontalAlignment="Stretch"
+                             HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center"
+                             FontSize="13"/>
+                <Button Content="{x:Static assets:Resources.AppTitleButton2}"
+                             x:Name="todo_btn"
+                             Click="Todo_Click"
+                             Height="50"
+                             Margin="5"
+                             Foreground="White"
+                             HorizontalAlignment="Stretch"
+                             HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center"
+                             FontSize="13"/>
+                 <Button Content="{x:Static assets:Resources.AppTitleButton3}"
+                    Height="50"
+                    Margin="5"
+                    Foreground="White"
+                    x:Name="breathe_btn"
+                    Click="breathe_btn_Click"
+                    HorizontalAlignment="Stretch"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    FontSize="13"/>
+            </StackPanel>
+            </Border>
+            <StackPanel 
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+                        <Label
+                           Content="{x:Static assets:Resources.LangSelect_title}"
+                           FontSize="14"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           Padding="5"/>
+						    <Button x:Name="langselect_eng"
+                                    Content="ENG"
+                                    FontSize="12"
+                                    Click="langselect_eng_Click"
+                                    HorizontalAlignment="Right"
+                                    Foreground="White"
+                                    />
+                            <Button x:Name="langselect_lv"
+                                    Content="LV"
+                                    FontSize="12"
+                                    Click="langselect_lv_Click"
+                                    HorizontalAlignment="Right"
+                                    Foreground="White"
+                                    />
+                
+                    </StackPanel>
+            <Button x:Name="moodselect_btn"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="8"
+                    Content="{x:Static assets:Resources.MoodButton}"
+                    Click="moodselect_btn_Click"
+                    FontSize="12"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Foreground="White"
+                    />
+            <Border Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="10"
+                    CornerRadius="8"
+                    BorderThickness="1.5"
+                    BorderBrush="#55FFFFFF"
+                    Background="#22FFFFFF">
+			<ContentControl 
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="10"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="{Binding CurrentPage}"
+                Foreground="White"/>	
+            </Border>
+            
+        </Grid>
+    </Border>
+    <Window.Background>
+		<LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,50%">
+            <GradientStop Color="#660066" Offset="0.1"/>
+            <GradientStop Color="#330040" Offset="0.4"/>
+            <GradientStop Color="#6A359C" Offset="0.8"/>
+        </LinearGradientBrush>
+    </Window.Background>
 </Window>

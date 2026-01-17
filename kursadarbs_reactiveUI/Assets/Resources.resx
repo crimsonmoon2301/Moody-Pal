@@ -120,6 +120,18 @@
   <data name="AppGreeting" xml:space="preserve">
     <value>Welcome to Moody Pal!</value>
   </data>
+  <data name="AppTitleButton" xml:space="preserve">
+    <value>Journal</value>
+  </data>
+  <data name="AppTitleButton1" xml:space="preserve">
+    <value>Focus Timer</value>
+  </data>
+  <data name="AppTitleButton2" xml:space="preserve">
+    <value>To-Do List</value>
+  </data>
+  <data name="AppTitleButton3" xml:space="preserve">
+    <value>Breathing Exercises</value>
+  </data>
   <data name="BreatheHold" xml:space="preserve">
     <value>Hold it...</value>
   </data>
@@ -144,8 +156,20 @@
   <data name="Infotip_nerv" xml:space="preserve">
     <value>Program will offer breathing exercises before you begin, colors more warmer, that don't cause emotions</value>
   </data>
+  <data name="JournalButton" xml:space="preserve">
+    <value>Add a entry</value>
+  </data>
+  <data name="JournalTitle" xml:space="preserve">
+    <value>Journal Entries</value>
+  </data>
+  <data name="JournalButton1" xml:space="preserve">
+    <value>Remove a entry</value>
+  </data>
   <data name="LangSelect_title" xml:space="preserve">
     <value>Languages:</value>
+  </data>
+  <data name="MoodButton" xml:space="preserve">
+    <value>Back to Mood Selector</value>
   </data>
   <data name="MoodCard_annoyed" xml:space="preserve">
     <value>Annoyed</value>
@@ -167,5 +191,107 @@
   </data>
   <data name="StartupMessage" xml:space="preserve">
     <value>Loading... Please wait</value>
+  </data>
+  <data name="JournalTitle1" xml:space="preserve">
+    <value>Journal Title</value>
+  </data>
+  <data name="JournalTitle2" xml:space="preserve">
+    <value>Entry Content</value>
+  </data>
+  <data name="JournalWatermark" xml:space="preserve">
+    <value>No Entry selected. Create one!</value>
+  </data>
+  <data name="JournalWatermark1" xml:space="preserve">
+    <value>This is empty. Maybe start with how you're feeling?</value>
+  </data>
+  <data name="CreateEntry" xml:space="preserve">
+    <value>New Journal Entry</value>
+  </data>
+  <data name="ToDoTitle" xml:space="preserve">
+    <value>To-Do List</value>
+  </data>
+  <data name="ToDoRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ToDoAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ToDoWatermark" xml:space="preserve">
+    <value>Add a new Item</value>
+  </data>
+  <data name="TimerStart" xml:space="preserve">
+    <value>Start Timer</value>
+  </data>
+  <data name="TimerPause" xml:space="preserve">
+    <value>Pause Timer</value>
+  </data>
+  <data name="TimerStop" xml:space="preserve">
+    <value>Timer Stop</value>
+  </data>
+  <data name="TimerTitle" xml:space="preserve">
+    <value>Focus Session</value>
+  </data>
+  <data name="BreathingTitle" xml:space="preserve">
+    <value>Before you begin:</value>
+  </data>
+  <data name="BreathingTitle1" xml:space="preserve">
+    <value>The exercise will be approx. 1 minute long</value>
+  </data>
+  <data name="BreathingTitle2" xml:space="preserve">
+    <value>Make sure you are seated while doing this</value>
+  </data>
+  <data name="BreathingTitle3" xml:space="preserve">
+    <value>You will see confirmation when this ends</value>
+  </data>
+  <data name="BreathingTitle4" xml:space="preserve">
+    <value>You can press "Start" whenever ready</value>
+  </data>
+  <data name="BreatheDone" xml:space="preserve">
+    <value>All done. You can close this now</value>
+  </data>
+  <data name="DeepBreathing5" xml:space="preserve">
+    <value>Hold it for 5...</value>
+  </data>
+  <data name="DeepBreathing4" xml:space="preserve">
+    <value>Hold it for 4...</value>
+  </data>
+  <data name="DeepBreathing3" xml:space="preserve">
+    <value>Hold it for 3...</value>
+  </data>
+  <data name="DeepBreathing2" xml:space="preserve">
+    <value>Hold it for 2...</value>
+  </data>
+  <data name="DeepBreathing1" xml:space="preserve">
+    <value>Hold it for 1...</value>
+  </data>
+  <data name="DeepBreathingExhale" xml:space="preserve">
+    <value>Exhale slowly through nose...</value>
+  </data>
+  <data name="BreathingSelection" xml:space="preserve">
+    <value>Available options:</value>
+  </data>
+  <data name="BreathingQuestion" xml:space="preserve">
+    <value>What would you like to try?</value>
+  </data>
+  <data name="BreathingOption1" xml:space="preserve">
+    <value>Box Breathing</value>
+  </data>
+  <data name="BreathingOption2" xml:space="preserve">
+    <value>4-7-8 Breathing</value>
+  </data>
+  <data name="BreathingOption3" xml:space="preserve">
+    <value>Deep Breathing</value>
+  </data>
+  <data name="BreathingSelection1" xml:space="preserve">
+    <value>Use the buttons to select</value>
+  </data>
+  <data name="BreathingStart" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="BreathingStop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="BreathingAlternative" xml:space="preserve">
+    <value>Try a different one</value>
   </data>
 </root>

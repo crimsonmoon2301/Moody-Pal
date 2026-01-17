@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
+             xmlns:assets="using:kursadarbs_reactiveUI.Assets"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="kursadarbs_reactiveUI.Views.BreatheSelectionView"
              x:DataType="vm:BreatheSelectionViewModel">
@@ -23,29 +24,29 @@
                    VerticalAlignment="Top"
                    FontSize="22"
                    FontWeight="SemiBold"
-                   Text="What would you like to try?"
+                   Text="{x:Static assets:Resources.BreathingOption1}"
                    TextAlignment="Center"
                    TextWrapping="Wrap"
                    Foreground="Black"/>
-       <Label Grid.Row="1" Content="Available options:"
+       <Label Grid.Row="1" Content="{x:Static assets:Resources.BreathingSelection}"
          FontSize="16"
          HorizontalAlignment="Center"
 
          FontWeight="SemiBold"
          Foreground="Black"/>
-      <Label Grid.Row="2" Content="1. Box Breathing"
+      <Label Grid.Row="2" Content="{x:Static assets:Resources.BreathingOption1}"
          FontSize="14"
          HorizontalAlignment="Center"
          Foreground="Black"/>
-       <Label Grid.Row="3"   Content="2. 4-7-8 Breathing"
+       <Label Grid.Row="3"   Content="{x:Static assets:Resources.BreathingOption2}"
          FontSize="14"
          HorizontalAlignment="Center"
          Foreground="Black"/>
-      <Label Grid.Row="4"   Content="3. Deep Breathing"
+      <Label Grid.Row="4"   Content="{x:Static assets:Resources.BreathingOption3}"
          FontSize="14"
          HorizontalContentAlignment="Center"
          Foreground="Black"/>
-      <Label Grid.Row="5" Content="You can use the buttons to select"
+      <Label Grid.Row="5" Content="{x:Static assets:Resources.BreathingSelection1}"
          FontSize="14"
          FontWeight="SemiBold"
          HorizontalAlignment="Center"
