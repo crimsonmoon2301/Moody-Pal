@@ -97,7 +97,7 @@ namespace kursadarbs_reactiveUI.Assets {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Breathing Exercises.
+        ///   Looks up a localized string similar to Exercises.
         /// </summary>
         public static string AppTitleButton3 {
             get {
@@ -327,6 +327,15 @@ namespace kursadarbs_reactiveUI.Assets {
         public static string DeepBreathingExhale {
             get {
                 return ResourceManager.GetString("DeepBreathingExhale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Only icons.
+        /// </summary>
+        public static string Icons {
+            get {
+                return ResourceManager.GetString("Icons", resourceCulture);
             }
         }
         

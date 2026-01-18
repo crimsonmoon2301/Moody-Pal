@@ -8,6 +8,7 @@ using kursadarbs_reactiveUI.Views;
 using System.Globalization;
 using System.Threading.Tasks;
 using System;
+using LibVLCSharp.Shared;
 
 namespace kursadarbs_reactiveUI
 {
@@ -44,7 +45,7 @@ namespace kursadarbs_reactiveUI
 
                 splashScreen.Close();
             }
-
+            Core.Initialize();
             base.OnFrameworkInitializationCompleted();
         }
     }

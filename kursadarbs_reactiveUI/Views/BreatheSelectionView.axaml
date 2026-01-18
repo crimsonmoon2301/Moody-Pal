@@ -24,7 +24,7 @@
                    VerticalAlignment="Top"
                    FontSize="22"
                    FontWeight="SemiBold"
-                   Text="{x:Static assets:Resources.BreathingOption1}"
+                   Text="{x:Static assets:Resources.BreathingQuestion}"
                    TextAlignment="Center"
                    TextWrapping="Wrap"
                    Foreground="Black"/>

@@ -130,7 +130,7 @@
     <value>Plānotājs</value>
   </data>
   <data name="AppTitleButton3" xml:space="preserve">
-    <value>Elpošanas vingrinājumi</value>
+    <value>Vingrinājumi</value>
   </data>
   <data name="BreatheHold" xml:space="preserve">
     <value>Turi elpu...</value>
@@ -293,5 +293,8 @@
   </data>
   <data name="BreathingAlternative" xml:space="preserve">
     <value>Izmēģini citu</value>
+  </data>
+  <data name="Icons" xml:space="preserve">
+    <value>Tikai ikonas</value>
   </data>
 </root>

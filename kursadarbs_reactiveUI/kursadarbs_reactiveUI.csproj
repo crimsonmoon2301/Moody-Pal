@@ -15,10 +15,18 @@
   <ItemGroup>
     <AvaloniaResource Remove="Assets\Resources.Designer.cs" />
     <AvaloniaResource Remove="Assets\Resources.lv-LV.resx" />
+    <AvaloniaResource Remove="Assets\sounds\timer_end.mp3" />
+    <AvaloniaResource Remove="Assets\timer_end.mp3" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="Assets\Resources.en-US.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\sounds\timer_end.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -40,13 +48,19 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.6" />
+    <PackageReference Include="LibVLCSharp" Version="3.9.5" />
+    <PackageReference Include="LibVLCSharp.Avalonia" Version="3.9.5" />
     <PackageReference Include="LoadingIndicators.Avalonia" Version="11.0.11.1" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.23" />
   </ItemGroup>
 
   <ItemGroup>
     <AvaloniaResource Update="Assets\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets\to-do-list.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AvaloniaResource>
   </ItemGroup>
 

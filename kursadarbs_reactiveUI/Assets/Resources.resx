@@ -130,7 +130,7 @@
     <value>To-Do List</value>
   </data>
   <data name="AppTitleButton3" xml:space="preserve">
-    <value>Breathing Exercises</value>
+    <value>Exercises</value>
   </data>
   <data name="BreatheHold" xml:space="preserve">
     <value>Hold it...</value>
@@ -293,5 +293,8 @@
   </data>
   <data name="BreathingAlternative" xml:space="preserve">
     <value>Try a different one</value>
+  </data>
+  <data name="Icons" xml:space="preserve">
+    <value>Only icons</value>
   </data>
 </root>

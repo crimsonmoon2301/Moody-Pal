@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Timers;
+using Avalonia.Media;
+using Avalonia.Platform;
+using LibVLCSharp.Shared;
+using System.IO;
+
+
 
 namespace kursadarbs_reactiveUI.ViewModels
 {
@@ -16,6 +22,8 @@ namespace kursadarbs_reactiveUI.ViewModels
         private Timer _timer;
         private string _remainingTimeText = "01:00";
         private TimeSpan _remainingTime = TimeSpan.FromMinutes(1);
+        private readonly LibVLC _libVLC;
+        private readonly MediaPlayer _mediaPlayer;
         public string RemainingTime
         {
             get => _remainingTimeText;
@@ -29,8 +37,10 @@ namespace kursadarbs_reactiveUI.ViewModels
         public ICommand StopTimerCommand { get; }
         public FocusViewModel()
         {
+            _libVLC = new LibVLC();
+            _mediaPlayer = new MediaPlayer(_libVLC);
             _timer = new Timer();
-            _timer.AutoReset = true;
+            //_timer.AutoReset = true;
             AddTimeCommand = ReactiveCommand.Create(AddTime);
             RemoveTimeCommand = ReactiveCommand.Create(RemoveTime);
             StartTimerCommand = ReactiveCommand.Create(StartTimer);
@@ -38,6 +48,9 @@ namespace kursadarbs_reactiveUI.ViewModels
             StopTimerCommand = ReactiveCommand.Create(StopTimer);
             _timer.Interval = 1000;
             _timer.Elapsed += OnTimerElapsed;
+
+            //
+
             UpdateTimeText();
         }
         private void OnTimerElapsed(object? sender, ElapsedEventArgs e)
@@ -45,6 +58,7 @@ namespace kursadarbs_reactiveUI.ViewModels
             if (_remainingTime.TotalNanoseconds <= 0)
             {
                 StopTimer();
+                PlayEndSound();
                 return;
             }
             _remainingTime -= TimeSpan.FromSeconds(1);
@@ -96,7 +110,15 @@ namespace kursadarbs_reactiveUI.ViewModels
 
         //    _timersession = 
         //}
+        private void PlayEndSound()
+        {
+            using var media = new Media(
+                _libVLC,
+                new Uri(Path.GetFullPath("Assets/sounds/timer_end.mp3"))
+            );
 
+            _mediaPlayer.Play(media);
+        }
         public string FormatTime(TimeSpan time)
         {
             return time.ToString(@"mm\:ss");

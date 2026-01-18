@@ -4,6 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="using:kursadarbs_reactiveUI.ViewModels"
         xmlns:assets="using:kursadarbs_reactiveUI.Assets"
+        xmlns:collections="using:System.Collections"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.CalmApp"
         x:DataType="vm:CalmAppViewModel"
@@ -13,7 +14,8 @@
         
         MinWidth="650"
         MinHeight="450"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        >
   <Border CornerRadius="10">
         <Grid Name="MainGrid">
             <Grid.ColumnDefinitions>
@@ -41,15 +43,38 @@
                         Background="#22FFFFFF">
 				<StackPanel Grid.Row="1" Name="RadioButtonPanel">
                 
-                <Button Content="{x:Static assets:Resources.AppTitleButton}"
+                <Button 
                              Click="Journal_Click"
                              Height="50" Foreground="White"
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
                              VerticalContentAlignment="Center"
                              FontSize="13"
-                             Margin="5"/>
-                <Button Content="{x:Static assets:Resources.AppTitleButton1}"
+                             Margin="5">
+				    <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0"
+                           Source="/Assets/diary.png"
+                           x:Name="icon"
+                           Height="32"
+                           VerticalAlignment="Center"
+                           Margin="0,0,12,0"
+                           IsVisible="false"/>
+
+                    <TextBlock Grid.Column="1"
+                         Text="{x:Static assets:Resources.AppTitleButton}"
+                         x:Name="AppTitleButton"
+                         Foreground="White"
+                         VerticalAlignment="Center"
+                         TextWrapping="Wrap"/>
+                    </Grid>
+                
+                    </Button>
+                    <Button
                              Click="Focus_Click"
                              Height="50"
                              Margin="5"
@@ -57,8 +82,32 @@
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
                              VerticalContentAlignment="Center"
-                             FontSize="13"/>
-                <Button Content="{x:Static assets:Resources.AppTitleButton2}"
+                             FontSize="13">
+
+                    <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0"
+                           Source="/Assets/chronometer.png"
+                           x:Name="icon1"
+                           Height="32"
+                           IsVisible="False"
+                           VerticalAlignment="Center"
+                           Margin="0,0,12,0"/>
+
+                    <TextBlock Grid.Column="1"
+                         Text="{x:Static assets:Resources.AppTitleButton1}"
+                         x:Name="AppTitleButton1"
+                         Foreground="White"
+                         VerticalAlignment="Center"
+                         TextWrapping="Wrap"/>
+                    </Grid>
+
+                    </Button>
+                <Button
                              x:Name="todo_btn"
                              Click="Todo_Click"
                              Height="50"
@@ -66,9 +115,30 @@
                              Foreground="White"
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
-                             VerticalContentAlignment="Center"
-                             FontSize="13"/>
-                 <Button Content="{x:Static assets:Resources.AppTitleButton3}"
+                             VerticalContentAlignment="Center">
+                   <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0"
+                           Source="/Assets/check-list.png"
+                           x:Name="icon2"
+                           IsVisible="False"
+                           Height="32"
+                           VerticalAlignment="Center"
+                           Margin="0,0,12,0"/>
+
+                    <TextBlock Grid.Column="1"
+                         Text="{x:Static assets:Resources.AppTitleButton2}"
+                         x:Name="AppTitleButton2"
+                         Foreground="White"
+                         VerticalAlignment="Center"
+                         TextWrapping="Wrap"/>
+                    </Grid>
+                    </Button>
+                 <Button
                     Height="50"
                     Margin="5"
                     Foreground="White"
@@ -77,7 +147,36 @@
                     HorizontalAlignment="Stretch"
                     HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
-                    FontSize="13"/>
+                    FontSize="13">
+
+                    <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0"
+                           Source="/Assets/breathe.png"
+                           Height="32"
+                           x:Name="icon3"
+                           IsVisible="False"
+                           VerticalAlignment="Center"
+                           Margin="0,0,12,0"/>
+
+                    <TextBlock Grid.Column="1"
+                         Text="{x:Static assets:Resources.AppTitleButton3}"
+                         x:Name="AppTitleButton3"
+                         Foreground="White"
+                         VerticalAlignment="Center"
+                         TextWrapping="Wrap"/>
+                    </Grid>
+                    </Button>
+                    <CheckBox Foreground="White" Margin="5,0,0,0" x:Name="Check_invis"
+                              HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                              VerticalContentAlignment="Center"
+                              Content="{x:Static assets:Resources.Icons}" IsChecked="false" Checked="Check_invis_Checked"
+                              Unchecked="Check_invis_Unchecked">
+                    </CheckBox>
             </StackPanel>
             </Border>
             <StackPanel 
@@ -144,9 +243,9 @@
     </Border>
     <Window.Background>
 		<LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,50%">
-            <GradientStop Color="#660066" Offset="0.1"/>
-            <GradientStop Color="#330040" Offset="0.4"/>
-            <GradientStop Color="#6A359C" Offset="0.8"/>
+            <GradientStop Color="#00022b" Offset="0.1"/>
+            <GradientStop Color="#010e54" Offset="0.4"/>
+            <GradientStop Color="#0855b1" Offset="0.8"/>
         </LinearGradientBrush>
     </Window.Background>
 </Window>
