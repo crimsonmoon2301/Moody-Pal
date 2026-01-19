@@ -93,6 +93,10 @@ namespace kursadarbs_reactiveUI.ViewModels
         {
             await Task.Delay(1000);
             var itemsLoaded = await ToDoListFileService.LoadFromFileAsync();
+            if (itemsLoaded == null)
+            {
+                return;
+            }
             foreach (var item in itemsLoaded)
             {
                 ToDoItems.Add(new ToDoViewModel(item));
