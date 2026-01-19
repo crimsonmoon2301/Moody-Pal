@@ -13,7 +13,8 @@ Added features so far:
 - Focus timer (inspired off of Windows Clock)
 - Journal
 - To-Do list
+- Persistence
 
 TODO list:
-- Persistence
+- Improve
 # Heavily WIP!
