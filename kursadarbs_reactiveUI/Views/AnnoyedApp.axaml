@@ -7,7 +7,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.AnnoyedApp"
         x:DataType="vm:AnnoyedAppViewModel"
-        Title="AnnoyedApp"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="{x:Static assets:Resources.MoodyMode2}"
         Width="800"
         Height="450"
         
@@ -48,7 +49,7 @@
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
                              VerticalContentAlignment="Center"
-                             FontSize="13"
+                             FontSize="16"
                              Margin="5">
 				    <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
@@ -59,14 +60,15 @@
                     <Image Grid.Column="0"
                            Source="/Assets/diary.png"
                            x:Name="icon"
-                           Height="32"
+                           Height="40"
                            VerticalAlignment="Center"
                            Margin="0,0,12,0"
-                           IsVisible="false"/>
+                           IsVisible="true"/>
 
                     <TextBlock Grid.Column="1"
                          Text="{x:Static assets:Resources.AppTitleButton}"
                          x:Name="AppTitleButton"
+                         IsVisible="False"
                          Foreground="White"
                          VerticalAlignment="Center"
                          TextWrapping="Wrap"/>
@@ -81,7 +83,7 @@
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
                              VerticalContentAlignment="Center"
-                             FontSize="13">
+                             FontSize="16">
 
                     <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
@@ -92,8 +94,8 @@
                     <Image Grid.Column="0"
                            Source="/Assets/chronometer.png"
                            x:Name="icon1"
-                           Height="32"
-                           IsVisible="False"
+                           Height="40"
+                           IsVisible="true"
                            VerticalAlignment="Center"
                            Margin="0,0,12,0"/>
 
@@ -101,6 +103,7 @@
                          Text="{x:Static assets:Resources.AppTitleButton1}"
                          x:Name="AppTitleButton1"
                          Foreground="White"
+                         IsVisible="False"
                          VerticalAlignment="Center"
                          TextWrapping="Wrap"/>
                     </Grid>
@@ -112,6 +115,7 @@
                              Height="50"
                              Margin="5"
                              Foreground="White"
+                             FontSize="16"
                              HorizontalAlignment="Stretch"
                              HorizontalContentAlignment="Center"
                              VerticalContentAlignment="Center">
@@ -124,14 +128,15 @@
                     <Image Grid.Column="0"
                            Source="/Assets/check-list.png"
                            x:Name="icon2"
-                           IsVisible="False"
-                           Height="32"
+                           IsVisible="true"
+                           Height="40"
                            VerticalAlignment="Center"
                            Margin="0,0,12,0"/>
 
                     <TextBlock Grid.Column="1"
                          Text="{x:Static assets:Resources.AppTitleButton2}"
                          x:Name="AppTitleButton2"
+                         IsVisible="False"
                          Foreground="White"
                          VerticalAlignment="Center"
                          TextWrapping="Wrap"/>
@@ -146,7 +151,7 @@
                     HorizontalAlignment="Stretch"
                     HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
-                    FontSize="13">
+                    FontSize="16">
 
                     <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
@@ -156,9 +161,9 @@
 
                     <Image Grid.Column="0"
                            Source="/Assets/breathe.png"
-                           Height="32"
+                           Height="40"
                            x:Name="icon3"
-                           IsVisible="False"
+                           IsVisible="true"
                            VerticalAlignment="Center"
                            Margin="0,0,12,0"/>
 
@@ -167,13 +172,15 @@
                          x:Name="AppTitleButton3"
                          Foreground="White"
                          VerticalAlignment="Center"
-                         TextWrapping="Wrap"/>
+                         TextWrapping="Wrap"
+                         IsVisible="False"/>
                     </Grid>
                     </Button>
                     <CheckBox Foreground="White" Margin="5,0,0,0" x:Name="Check_invis"
                               HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
                               VerticalContentAlignment="Center"
-                              Content="{x:Static assets:Resources.Icons}" IsChecked="false" Checked="Check_invis_Checked"
+                              FontSize="16"
+                              Content="{x:Static assets:Resources.Icons}" IsChecked="true" Checked="Check_invis_Checked"
                               Unchecked="Check_invis_Unchecked">
                     </CheckBox>
             </StackPanel>
@@ -193,14 +200,14 @@
                            Padding="5"/>
 						    <Button x:Name="langselect_eng"
                                     Content="ENG"
-                                    FontSize="12"
+                                    FontSize="16"
                                     Click="langselect_eng_Click"
                                     HorizontalAlignment="Right"
                                     Foreground="White"
                                     />
                             <Button x:Name="langselect_lv"
                                     Content="LV"
-                                    FontSize="12"
+                                    FontSize="16"
                                     Click="langselect_lv_Click"
                                     HorizontalAlignment="Right"
                                     Foreground="White"
@@ -213,7 +220,7 @@
                     Margin="8"
                     Content="{x:Static assets:Resources.MoodButton}"
                     Click="moodselect_btn_Click"
-                    FontSize="12"
+                    FontSize="14"
                     Height="30"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"

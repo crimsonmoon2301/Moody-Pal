@@ -8,7 +8,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.HappyApp"
         x:DataType="vm:HappyAppViewModel"
-        Title="HappyApp"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="{x:Static assets:Resources.MoodyMode}"
         Width="800"
         Height="450"
         

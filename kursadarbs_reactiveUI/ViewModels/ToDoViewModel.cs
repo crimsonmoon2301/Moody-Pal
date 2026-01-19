@@ -1,9 +1,12 @@
 ﻿using Avalonia;
 using Avalonia.Interactivity;
 using kursadarbs_reactiveUI.Models;
+using kursadarbs_reactiveUI.Services;
 using ReactiveUI;
 using System.Collections.ObjectModel;
 using System.Reactive;
+using Avalonia.Threading;
+using System.Threading.Tasks;
 
 namespace kursadarbs_reactiveUI.ViewModels
 {
@@ -16,6 +19,8 @@ namespace kursadarbs_reactiveUI.ViewModels
         {
             AddItemCommand = ReactiveCommand.Create(AddItem);
             RemoveItemCommand = ReactiveCommand.Create<ToDoViewModel>(RemoveItem);
+
+            LoadItems();
         }
 
        
@@ -83,6 +88,15 @@ namespace kursadarbs_reactiveUI.ViewModels
         {
             // Remove the given item from the list
             ToDoItems.Remove(item);
+        }
+        private async void LoadItems()
+        {
+            await Task.Delay(1000);
+            var itemsLoaded = await ToDoListFileService.LoadFromFileAsync();
+            foreach (var item in itemsLoaded)
+            {
+                ToDoItems.Add(new ToDoViewModel(item));
+            }
         }
     }
 }

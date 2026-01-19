@@ -7,7 +7,10 @@
              mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="450"
              x:Class="kursadarbs_reactiveUI.Views.NotesView"
              x:DataType="vm:NotesViewModel"
-             Background="Transparent">
+             x:Name="Journal"
+             Background="Transparent"
+             Unloaded="Journal_Unloaded"
+             >
 <Design.DataContext>
 	<vm:NotesViewModel/>
 </Design.DataContext>
@@ -29,11 +32,13 @@
         <Grid Grid.Row="2" Grid.Column="0" ColumnDefinitions="*,*">
 			<Button  Grid.Column="0" Command="{Binding AddEntryCommand}"
                         Content="{x:Static assets:Resources.JournalButton}"
+                        Foreground="White"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         HorizontalContentAlignment="Center"/>
             <Button Grid.Column="1" Command="{Binding RemoveEntryCommand}"
                         Content="{x:Static assets:Resources.JournalButton1}"
+                        Foreground="White"
                         IsEnabled="{Binding Selected}"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
@@ -47,6 +52,5 @@
                  TextWrapping="Wrap"
                  AcceptsReturn="True"/>
         </Grid>
-       
     </Grid>
 </UserControl>

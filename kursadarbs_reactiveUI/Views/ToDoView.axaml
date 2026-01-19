@@ -6,7 +6,10 @@
              xmlns:assets="using:kursadarbs_reactiveUI.Assets"
              x:Class="kursadarbs_reactiveUI.Views.ToDoView"
              x:DataType="vm:ToDoViewModel"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450">
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Name="Todo"
+             Unloaded="Todo_Unloaded"
+             >
 <Design.DataContext>
 	<vm:ToDoViewModel/>
 </Design.DataContext>

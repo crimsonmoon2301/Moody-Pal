@@ -63,7 +63,9 @@ namespace kursadarbs_reactiveUI.Views
         private void annoyed_btn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             var annoyedwindow = new AnnoyedApp();
+            var breathewindow = new BreatheMainWindow();
             annoyedwindow.Show();
+            breathewindow.Show();
             this.Close();
         }
 
@@ -77,7 +79,9 @@ namespace kursadarbs_reactiveUI.Views
         private void nervous_btn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             var nervouswindow = new NervousApp();
+            var breathewindow = new BreatheMainWindow();
             nervouswindow.Show();
+            breathewindow.Show();
             this.Close();
         }
 

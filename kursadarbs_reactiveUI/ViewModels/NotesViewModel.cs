@@ -1,4 +1,7 @@
 ﻿using Avalonia.Interactivity;
+using kursadarbs_reactiveUI.Assets;
+using kursadarbs_reactiveUI.Models;
+using kursadarbs_reactiveUI.Services;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -7,8 +10,6 @@ using System.Linq;
 using System.Reactive;
 using System.Text;
 using System.Threading.Tasks;
-using kursadarbs_reactiveUI.Models;
-using kursadarbs_reactiveUI.Assets;
 
 namespace kursadarbs_reactiveUI.ViewModels
 {
@@ -16,6 +17,7 @@ namespace kursadarbs_reactiveUI.ViewModels
     {
         public ReactiveCommand<Unit, Unit> AddEntryCommand { get; }
         public ReactiveCommand<Unit, Unit> RemoveEntryCommand { get; }
+        public ReactiveCommand<Unit, Unit> SaveEntryCommand { get; }
         public ObservableCollection<JournalItem> JournalItems { get; } = new();
 
         //public string Title
@@ -50,9 +52,14 @@ namespace kursadarbs_reactiveUI.ViewModels
         {
             AddEntryCommand = ReactiveCommand.Create(AddEntry);
             RemoveEntryCommand = ReactiveCommand.Create(RemoveEntry);
+
+            LoadItems();
         }
-        
         private DateTime _created;
+
+        
+
+       
         public void AddEntry()
         {
             //var entry = new JournalItem
@@ -64,8 +71,7 @@ namespace kursadarbs_reactiveUI.ViewModels
             var entry = new JournalItem
             {
                 Title = Assets.Resources.CreateEntry,
-                Content = "",
-                Created = DateTime.Now
+                Content = ""
             };
             JournalItems.Add(entry);
         }
@@ -75,6 +81,25 @@ namespace kursadarbs_reactiveUI.ViewModels
             {
                 JournalItems.Remove(Selected);
             }
+        }
+        private async void LoadItems()
+        {
+            await Task.Delay(1000);
+            var items = await JournalFileService.LoadFromFileAsync();
+            if (items == null)
+            {
+                return;
+            }
+
+            JournalItems.Clear();
+            foreach (var item in items)
+            {
+                JournalItems.Add(item);
+            }
+        }
+        public async void SaveItems()
+        {
+            await JournalFileService.SaveToFileAsync(JournalItems);
         }
     }
 }

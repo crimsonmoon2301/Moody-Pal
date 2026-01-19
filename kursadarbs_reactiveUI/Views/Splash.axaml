@@ -8,6 +8,7 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         xmlns:li="using:LoadingIndicators.Avalonia"
         xmlns:assets="using:kursadarbs_reactiveUI.Assets"
+        Icon="/Assets/avalonia-logo.ico"
         Title="Moody Pal"
         WindowStartupLocation="CenterScreen"
         Width="700"
@@ -27,7 +28,8 @@
                    VerticalAlignment="Stretch"
                    HorizontalContentAlignment="Center"
                    VerticalContentAlignment="Center"
-                   Content="{Binding ProgramName}">
+                   Content="{Binding ProgramName}"
+                   Foreground="White">
             </Label>
             <li:LoadingIndicator Mode="Arcs" SpeedRatio="1.2" />
             <Label Grid.Row="1"
@@ -36,6 +38,7 @@
                    x:Name="startup_msg"
                    Content="{x:Static assets:Resources.StartupMessage}"
                    FontSize="12"
+                   Foreground="White"
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Stretch"
                    HorizontalContentAlignment="Center"

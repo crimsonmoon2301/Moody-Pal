@@ -145,16 +145,16 @@
     <value>Pārvieto kursoru virs pogas, lai varētu iegūt informāciju kā programma pielāgojas!</value>
   </data>
   <data name="Infotip_annoyed" xml:space="preserve">
-    <value>Programma izmantos neitrālas krāsas un mazāk uzmanību piesaistošus elementus</value>
+    <value>Programma atvērs elpošanas vingrinājumus, izmantos krietni lielāku tekstu šifru, tumšākas krāsas un ikonas kur iespējams</value>
   </data>
   <data name="Infotip_calm" xml:space="preserve">
-    <value>Programma izmantos mierīgākas, gaišākas krāsas</value>
+    <value>Programma izmantos mierīgākas krāsas un vidēja izmēra burtu šifru. UI būs vienkāršots</value>
   </data>
   <data name="Infotip_happy" xml:space="preserve">
     <value>Programma tiks palaista normālā režīmā</value>
   </data>
   <data name="Infotip_nerv" xml:space="preserve">
-    <value>Programma piedāvās elpošanas vingrinājums pirms sākšanas, krāsas būs gaišākas, kuras neizraisa emocijas.</value>
+    <value>Programma piedāvās elpošanas vingrinājums pirms sākšanas, krāsas būs tumšākas, kuras neizraisa lieku noslodzi</value>
   </data>
   <data name="JournalButton" xml:space="preserve">
     <value>Jauns ieraksts</value>
@@ -296,5 +296,17 @@
   </data>
   <data name="Icons" xml:space="preserve">
     <value>Tikai ikonas</value>
+  </data>
+  <data name="MoodyMode" xml:space="preserve">
+    <value>Moody Pal - Priecīgais režīms</value>
+  </data>
+  <data name="MoodyMode1" xml:space="preserve">
+    <value>Moody Pal - Nervozais režīms</value>
+  </data>
+  <data name="MoodyMode2" xml:space="preserve">
+    <value>Moody Pal - Aizkaitināts režīms</value>
+  </data>
+  <data name="MoodyMode3" xml:space="preserve">
+    <value>Moody Pal - Mierīgais režīms</value>
   </data>
 </root>

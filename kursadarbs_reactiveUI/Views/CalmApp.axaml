@@ -8,7 +8,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="kursadarbs_reactiveUI.CalmApp"
         x:DataType="vm:CalmAppViewModel"
-        Title="CalmApp"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="{x:Static assets:Resources.MoodyMode3}"
         Width="800"
         Height="450"
         

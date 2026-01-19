@@ -349,7 +349,7 @@ namespace kursadarbs_reactiveUI.Assets {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Program will use neutral colors and less distractions to get more done.
+        ///   Looks up a localized string similar to Program will open breathing exercises, have significantly bigger font, darker colors and icons where applicable.
         /// </summary>
         public static string Infotip_annoyed {
             get {
@@ -358,7 +358,7 @@ namespace kursadarbs_reactiveUI.Assets {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Program will use calm, warmer colors.
+        ///   Looks up a localized string similar to Program will use calmer colors and an average sized font. UI will be simplified.
         /// </summary>
         public static string Infotip_calm {
             get {
@@ -376,7 +376,7 @@ namespace kursadarbs_reactiveUI.Assets {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Program will offer breathing exercises before you begin, colors more warmer, that don&apos;t cause emotions.
+        ///   Looks up a localized string similar to Program will offer breathing exercises before you begin, colors are darker, that don&apos;t cause mental strain.
         /// </summary>
         public static string Infotip_nerv {
             get {
@@ -516,6 +516,42 @@ namespace kursadarbs_reactiveUI.Assets {
         public static string MoodSelector_title {
             get {
                 return ResourceManager.GetString("MoodSelector_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moody Pal - Happy mode.
+        /// </summary>
+        public static string MoodyMode {
+            get {
+                return ResourceManager.GetString("MoodyMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moody Pal - Nervous mode.
+        /// </summary>
+        public static string MoodyMode1 {
+            get {
+                return ResourceManager.GetString("MoodyMode1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moody Pal - Annoyed mode.
+        /// </summary>
+        public static string MoodyMode2 {
+            get {
+                return ResourceManager.GetString("MoodyMode2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moody Pal - Calm mode.
+        /// </summary>
+        public static string MoodyMode3 {
+            get {
+                return ResourceManager.GetString("MoodyMode3", resourceCulture);
             }
         }
         

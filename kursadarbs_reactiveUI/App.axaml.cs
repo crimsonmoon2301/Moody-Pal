@@ -3,12 +3,14 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
 using kursadarbs_reactiveUI;
+using kursadarbs_reactiveUI.Services;
 using kursadarbs_reactiveUI.ViewModels;
 using kursadarbs_reactiveUI.Views;
-using System.Globalization;
-using System.Threading.Tasks;
-using System;
 using LibVLCSharp.Shared;
+using System;
+using System.Globalization;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace kursadarbs_reactiveUI
 {
@@ -18,6 +20,8 @@ namespace kursadarbs_reactiveUI
         {
             AvaloniaXamlLoader.Load(this);
         }
+
+        private readonly ToDoViewModel _todoViewModel = new ToDoViewModel();
 
         public override async void OnFrameworkInitializationCompleted()
         {
@@ -35,7 +39,7 @@ namespace kursadarbs_reactiveUI
 
                 splashScreenVM.StartupMessage = Assets.Resources.StartupMessage;
                 await Task.Delay(8000);
-                
+
                 var mainWin = new MainWindow
                 {
                     DataContext = new MainWindowViewModel(),
@@ -48,5 +52,6 @@ namespace kursadarbs_reactiveUI
             Core.Initialize();
             base.OnFrameworkInitializationCompleted();
         }
+        
     }
 }

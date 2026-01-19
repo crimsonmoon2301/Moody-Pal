@@ -76,4 +76,9 @@ public partial class AnnoyedApp : Window
         icon2.IsVisible = false;
         icon3.IsVisible = false;
     }
+
+    private void Window_Loaded(object? sender, RoutedEventArgs e)
+    {
+       
+    }
 }

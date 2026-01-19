@@ -145,16 +145,16 @@
     <value>Hover over a button to get more info about how the program adapts!</value>
   </data>
   <data name="Infotip_annoyed" xml:space="preserve">
-    <value>Program will use neutral colors and less distractions to get more done</value>
+    <value>Program will open breathing exercises, have significantly bigger font, darker colors and icons where applicable</value>
   </data>
   <data name="Infotip_calm" xml:space="preserve">
-    <value>Program will use calm, warmer colors</value>
+    <value>Program will use calmer colors and an average sized font. UI will be simplified</value>
   </data>
   <data name="Infotip_happy" xml:space="preserve">
     <value>Program will launch as normal</value>
   </data>
   <data name="Infotip_nerv" xml:space="preserve">
-    <value>Program will offer breathing exercises before you begin, colors more warmer, that don't cause emotions</value>
+    <value>Program will offer breathing exercises before you begin, colors are darker, that don't cause mental strain</value>
   </data>
   <data name="JournalButton" xml:space="preserve">
     <value>Add a entry</value>
@@ -296,5 +296,17 @@
   </data>
   <data name="Icons" xml:space="preserve">
     <value>Only icons</value>
+  </data>
+  <data name="MoodyMode" xml:space="preserve">
+    <value>Moody Pal - Happy mode</value>
+  </data>
+  <data name="MoodyMode1" xml:space="preserve">
+    <value>Moody Pal - Nervous mode</value>
+  </data>
+  <data name="MoodyMode2" xml:space="preserve">
+    <value>Moody Pal - Annoyed mode</value>
+  </data>
+  <data name="MoodyMode3" xml:space="preserve">
+    <value>Moody Pal - Calm mode</value>
   </data>
 </root>
